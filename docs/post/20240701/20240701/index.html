@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>HugoとGithub pagesでブログサイトを構築する - </title>
+
+  <meta name="description" content="はじめに 今回は静的サイトジェネレータHugoを用いてブログサイトを構築・Github pagesにデプ">
+  <meta name="author" content="yuudee"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "@yuudee",
+    
+    "url": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/post\/20240701\/20240701\/",
+          "name": "Hugoと github pagesでブログサイトを構築する"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "yuudee"
+  },
+  "headline": "HugoとGithub pagesでブログサイトを構築する",
+  "description" : "はじめに 今回は静的サイトジェネレータHugoを用いてブログサイトを構築・Github pagesにデプ",
+  "inLanguage" : "en",
+  "wordCount":  1580 ,
+  "datePublished" : "2024-07-01T14:03:33\u002b09:00",
+  "dateModified" : "2024-07-01T14:03:33\u002b09:00",
+  "image" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/images\/howl012.jpg",
+  "keywords" : [ "hugo, github" ],
+  "mainEntityOfPage" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/post\/20240701\/20240701\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/images\/howl012.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="HugoとGithub pagesでブログサイトを構築する" />
+<meta property="og:description" content="はじめに 今回は静的サイトジェネレータHugoを用いてブログサイトを構築・Github pagesにデプ">
+<meta property="og:image" content="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" />
+<meta property="og:url" content="http://ik1-322-21215.vs.sakura.ne.jp/post/20240701/20240701/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="@yuudee" />
+
+  <meta name="twitter:title" content="HugoとGithub pagesでブログサイトを構築する" />
+  <meta name="twitter:description" content="はじめに 今回は静的サイトジェネレータHugoを用いてブログサイトを構築・Github pagesにデプ">
+  <meta name="twitter:image" content="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yuu__dee" />
+  <meta name="twitter:creator" content="@yuu__dee" />
+  <link href='http://ik1-322-21215.vs.sakura.ne.jp/sample.png' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.127.0">
+  <link rel="alternate" href="http://ik1-322-21215.vs.sakura.ne.jp/index.xml" type="application/rss+xml" title="@yuudee"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/highlight.min.css" /><link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://ik1-322-21215.vs.sakura.ne.jp/">@yuudee</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="http://ik1-322-21215.vs.sakura.ne.jp/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Book" href="http://ik1-322-21215.vs.sakura.ne.jp/page/book/">Book</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About Me" href="http://ik1-322-21215.vs.sakura.ne.jp/page/about/">About Me</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="http://ik1-322-21215.vs.sakura.ne.jp/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="@yuudee" href="http://ik1-322-21215.vs.sakura.ne.jp/">
+            <img class="avatar-img" src="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" alt="@yuudee" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+  
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>HugoとGithub pagesでブログサイトを構築する</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 1, 2024
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;yuudee
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+  
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="はじめに">はじめに</h1>
+<p>今回は静的サイトジェネレータ<code>Hugo</code>を用いてブログサイトを構築・Github pagesにデプロイする手順を紹介していきたいと思います．</p>
+<p>以前までは全てのアウトプットをQiitaに投稿していましたが，Qiitaに投稿するまでもないようなアウトプットなどを残せる場所を残したいと思い，このサイトを作りました．</p>
+<h1 id="hugoのダウンロード">Hugoのダウンロード</h1>
+<p>まずはHugoのインストールを行います．</p>
+<p>この<a href="https://github.com/gohugoio/hugo/releases">サイト</a>よりzipファイルをダウンロードします．</p>
+<p>以下のサイトの
+<img src="https://yuudee.github.io/yuudee_blog/images/20240701/hugo_github_install.png" alt="hugoのインストール">
+今回はwindowsで構築するので<code>hugo_0.127.0_windows-amd64.zip</code>をダウンロードし任意の場所に回答します(＊以後は<code>hugo_path</code>とします)．</p>
+<h1 id="環境変数の設定">環境変数の設定</h1>
+<p>hugoのコマンドが実行できるようにpathを通します．
+pathを通す場所は，先ほどのzipファイルの解凍先です．</p>
+<h1 id="サイトの初期化">サイトの初期化</h1>
+<p>ここから新しいサイトの構築をしていきます．</p>
+<p>コマンドプロンプトを開いて<code>hugo_path</code>に移動します．(pathを通した後に再起動などをすれば移動しなくてもいいかもしれません．)</p>
+<p><code>hugo new site {任意の名前}</code></p>
+<p>実行後，このようにいくつかのファイルが生成されます．</p>
+<p><img src="http://ik1-322-21215.vs.sakura.ne.jp/images/20240701/initialized_hugo.png" alt="initialized_hugo"></p>
+<h1 id="テーマの設定">テーマの設定</h1>
+<p>Hugoには多くのテンプレートテーマが準備されています．</p>
+<p>今回は<a href="https://themes.gohugo.io/">Hugo Themes</a>の中の<code>beautifulhugo</code>というテーマを使用します．</p>
+<p>gitよりテーマのファイルをクローンしてきます．(themeディレクトリで)</p>
+<p><code>git clone https://github.com/halogenica/beautifulhugo.git</code></p>
+<p><code>hugo.toml</code>に以下の内容を追記します．</p>
+<p><code>theme = 'beautifulhugo'</code></p>
+<p>これで起動できます．</p>
+<p><code>hugo serve</code></p>
+<h1 id="細かい設定について">細かい設定について</h1>
+<p>細かい設定などは<code>beautifulhugo</code>の中の<code>example site</code>の中に書いてあるのでそちらをディレクトリごとコピーすればいいかなと思います．</p>
+<h2 id="記事の作成">記事の作成</h2>
+<p>以下のコマンドを実行して新しいファイルを作成します．
+<code>hugo new post/{日付}/{ファイル名}.md</code>
+私は画像を記事ごとのディレクトリに分けて保存しているため<code>{日付}</code>というディレクトリを間に挟んでいます．</p>
+<h2 id="記事のヘッダーについて">記事のヘッダーについて</h2>
+<p>各記事のヘッダーは以下のように記述します．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: {タイトル}
+</span></span><span class="line"><span class="cl">subtitle: {サブタイトル}
+</span></span><span class="line"><span class="cl">date: {投稿日}
+</span></span><span class="line"><span class="cl">tags: {タグ，複数指定する場合は，[]で囲む}
+</span></span><span class="line"><span class="cl">bigimg: [{src: {パス}, desc: {キャプション？}}]
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>また先ほどの<code>hugo new post/{日付}/{ファイル名}.md</code>などで新規ファイルを作成するとヘッダーのデフォルトが</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title:
+</span></span><span class="line"><span class="cl">subtitle:
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></div><p>みたいな感じになりますが，そちらは<code>archetype/default.md</code>の中身を書き換えれば反映させることができます．</p>
+<h1 id="github-pagesの利用">Github pagesの利用</h1>
+<p>ここからは実際にブログとして運用するためにGithub pagesへのデプロイ方法について書いていきます．</p>
+<p>まず適当はリポジトリを作成します．今回は<code>yuudee_blog</code>とします．</p>
+<p>次にローカルのブログ用ディレクトリとリモートリポジトリを接続します．</p>
+<p><code>git remote add origin {リポジトリのURL}</code></p>
+<p>何か適当な記事を作成します．</p>
+<p>コマンドラインで<code>hugo</code>と入力します．これによって記事用に作成したmarkdownファイルがHTMLに変換されwebページとして表示できるようになります．</p>
+<p>{サイト名}以下のディレクトリを全てコミットします．この時<code>hugo</code>コマンドによって生成されたディレクトリを<code>docs</code>にしないとGithub pagesでデプロイできない？ようなので<code>hugo.toml</code>に以下の内容を追記します．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml:hugo.toml" data-lang="toml:hugo.toml"><span class="line"><span class="cl"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s2">&#34;docs&#34;</span>
+</span></span></code></pre></div><p>Github側にコミットしたら<code>setting</code>に進み<code>pages</code>の項目を以下のように変更します．</p>
+<p><img src="http://ik1-322-21215.vs.sakura.ne.jp/images/20240701/githubpages_setting.png" alt="githubpages_setting"></p>
+<p>画像を埋め込みたい際には<code>static</code>ディレクトリに<code>images</code>というフォルダを作成し，その中に画像を入れていきます．</p>
+<p>参照する際は<code>https://{ユーザ名}.github.io/{リポジトリ名}/images/{画像名}</code>のような形式で書くようにしてください</p>
+
+
+        
+          <div class="blog-tags">
+            
+              
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/tags/hugo/">hugo</a>&nbsp;
+            
+              
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/tags/github/">github</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/post/20240710/20240710/" data-toggle="tooltip" data-placement="top" title="RSA暗号について">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+  
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            
+              <a href="https://github.com/yuudee"
+                title="GitHub">
+                
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+          </li>
+          <li>
+            
+              <a href="https://twitter.com/yuu__dee"
+                title="Twitter">
+                
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="http://ik1-322-21215.vs.sakura.ne.jp/">yuudee</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2024
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://ik1-322-21215.vs.sakura.ne.jp/">@yuudee</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.127.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+  integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+  integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/main.js"></script>
+<script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css"
+    integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"
+    integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            delimiters: [
+                
+                { left: "$", right: "$", display: false }]
+        });
+    });
+</script>
+  
+</body>
+
+</html>

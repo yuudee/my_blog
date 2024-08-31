@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>メール周りの勉強 - </title>
+
+  <meta name="description" content="目次 目次 SMTP,POP,IMAPについて メールの構造について メールヘッダーについて メールを送信する">
+  <meta name="author" content="yuudee"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "@yuudee",
+    
+    "url": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/post\/20240712\/20240712\/",
+          "name": "メール周りの勉強"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "yuudee"
+  },
+  "headline": "メール周りの勉強",
+  "description" : "目次 目次 SMTP,POP,IMAPについて メールの構造について メールヘッダーについて メールを送信する",
+  "inLanguage" : "en",
+  "wordCount":  5179 ,
+  "datePublished" : "2024-07-08T11:17:09\u002b09:00",
+  "dateModified" : "2024-07-08T11:17:09\u002b09:00",
+  "image" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/images\/howl012.jpg",
+  "keywords" : [ "SMTP, DNS" ],
+  "mainEntityOfPage" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/post\/20240712\/20240712\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/ik1-322-21215.vs.sakura.ne.jp\/images\/howl012.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="メール周りの勉強" />
+<meta property="og:description" content="目次 目次 SMTP,POP,IMAPについて メールの構造について メールヘッダーについて メールを送信する">
+<meta property="og:image" content="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" />
+<meta property="og:url" content="http://ik1-322-21215.vs.sakura.ne.jp/post/20240712/20240712/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="@yuudee" />
+
+  <meta name="twitter:title" content="メール周りの勉強" />
+  <meta name="twitter:description" content="目次 目次 SMTP,POP,IMAPについて メールの構造について メールヘッダーについて メールを送信する">
+  <meta name="twitter:image" content="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yuu__dee" />
+  <meta name="twitter:creator" content="@yuu__dee" />
+  <link href='http://ik1-322-21215.vs.sakura.ne.jp/sample.png' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.127.0">
+  <link rel="alternate" href="http://ik1-322-21215.vs.sakura.ne.jp/index.xml" type="application/rss+xml" title="@yuudee"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/highlight.min.css" /><link rel="stylesheet" href="http://ik1-322-21215.vs.sakura.ne.jp/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  
+
+
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://ik1-322-21215.vs.sakura.ne.jp/">@yuudee</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="http://ik1-322-21215.vs.sakura.ne.jp/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Book" href="http://ik1-322-21215.vs.sakura.ne.jp/page/book/">Book</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About Me" href="http://ik1-322-21215.vs.sakura.ne.jp/page/about/">About Me</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="http://ik1-322-21215.vs.sakura.ne.jp/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="@yuudee" href="http://ik1-322-21215.vs.sakura.ne.jp/">
+            <img class="avatar-img" src="http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" alt="@yuudee" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+  
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>メール周りの勉強</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 8, 2024
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;yuudee
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+  
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="目次">目次</h1>
+<ul>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li>
+<li><a href="#smtppopimap%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">SMTP,POP,IMAPについて</a></li>
+<li><a href="#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">メールの構造について</a></li>
+<li><a href="#%E3%83%A1%E3%83%BC%E3%83%AB%E3%83%98%E3%83%83%E3%83%80%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">メールヘッダーについて</a></li>
+<li><a href="#%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E8%AA%8D%E8%A8%BC">メールを送信する際の認証</a></li>
+<li><a href="#op25b">OP25B</a></li>
+<li><a href="#dns%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">DNSサーバーについて</a></li>
+<li><a href="#%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E6%89%B1%E3%81%84%E6%96%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">メールにおける日本語の扱い方について</a></li>
+<li><a href="#%E9%80%81%E4%BF%A1%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E8%AA%8D%E8%A8%BC">送信ドメイン認証</a>
+<ul>
+<li><a href="#spf">SPF</a></li>
+<li><a href="#dkim">DKIM</a></li>
+<li><a href="#dmarc">DMARC</a></li>
+<li><a href="#dnssec">DNSSEC</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+<li><a href="#%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</a></li>
+</ul>
+<h1 id="smtppopimapについて">SMTP,POP,IMAPについて</h1>
+<ul>
+<li>SMTPとは
+<ul>
+<li>SMTP(Simple Mail Transfer Protocol)の略で名前の通り<!-- raw HTML omitted -->メールを転送・送信<!-- raw HTML omitted -->するためのプロトコルです．</li>
+<li>SMTPサーバに接続することでメールの転送・送信が可能になります．
+<ul>
+<li>その際にクライアントからSMTPサーバへの接続は25番ポートに対してTelnetを使って行われます．
+<ul>
+<li>後程紹介する<code>OP25B</code>により25番ポートは使われない場合が多いです．</li>
+</ul>
+</li>
+<li>イメージとしてはTCP/IPの3way hand shakeみたいな感じで互いにやり取りしてる感じです．</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>POPとは
+<ul>
+<li>POP(Post Office Protocol)とはメールの受信に用いられるプロトコルでありSMTPは送信を担っているのに対してこちらは受信を担っています．</li>
+<li>受信したメールを<!-- raw HTML omitted -->ローカルにダウンロードしたのちにメールサーバからは該当のメールが削除<!-- raw HTML omitted -->されるため一度ダウンロードするとその端末以外からは見れなくなります．</li>
+</ul>
+</li>
+<li>IMAPとは
+<ul>
+<li>IMAP(Internet Message Access Protocol)はPOPと同様にメールを受信するためのプロトコルです．</li>
+<li>POPとは異なりメールサーバー上でメールの管理を行っているため複数の端末で同一のメールを閲覧することができ，<!-- raw HTML omitted -->ある端末で閲覧してもサーバー上から削除はされません．<!-- raw HTML omitted --></li>
+<li>あくまでもローカルにコピーをとっているようなイメージです．</li>
+</ul>
+</li>
+<li>なのでPOPとIMAPはメールを管理する場所が違うという感じです．
+<ul>
+<li>POP：ローカルの端末</li>
+<li>IMAP：メールサーバ上</li>
+</ul>
+</li>
+</ul>
+<h1 id="メールの構造について">メールの構造について</h1>
+<ul>
+<li>SMTPでメールを送信する際，メール本文の宛先をもとに送信するわけではない
+<ul>
+<li>封筒の役割を果たす<!-- raw HTML omitted -->エンベロープ<!-- raw HTML omitted -->を参照している．</li>
+<li>エンベロープに書かれている送信者をエンベロープFrom，宛先をエンベロープToという．</li>
+<li>エンベロープFromと本文のFromや，エンベロープToと本文のToが異なる場合がある．
+<ul>
+<li>企業のメールマガジンの配信などで，送信に使うメールサーバに外部のメールサーバを使いたいとき</li>
+<li>エンベロープFromは外部のメールサーバ，本文のFromは企業名などにしておくなど</li>
+<li>エンベロープFromを偽装することでエラーメールを用いて特定のメールアドレスに大量のメールを送り付ける方法がある</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="メールヘッダーについて">メールヘッダーについて</h1>
+<ul>
+<li>メールヘッダーには送信先[To]や送信元[From]，件名[Subject]のほかに送信日時を表す[Date]やメールを一意に識別するための[Message-ID]などの様々な情報が付加されています．</li>
+<li>また，MIME(Multipurpose Internet Mail Extension)と呼ばれるようなメールに文字列以外の画像やPDFなどのファイルを添付するための拡張機能などでは，添付ファイルごとにヘッダーと本文を繰り返すような構造をとっています．
+<ul>
+<li>ヘッダーには[MIME-Version:1.0]などが付加されます．</li>
+</ul>
+</li>
+<li>Content-type
+<ul>
+<li>メール本文の形式を指定するもので，メールにテキストや画像，音声，動画などを添付する際にその種類が指定されています．</li>
+<li>テキスト形式の場合
+<ul>
+<li><code>Content-Type: text/plain;charset=UTF-8</code></li>
+</ul>
+</li>
+<li>画像の場合
+<ul>
+<li><code>Content-Type: image/png</code></li>
+</ul>
+</li>
+<li>動画の場合
+<ul>
+<li><code>Content-Type: video/mp4</code></li>
+</ul>
+</li>
+<li>PDFの場合
+<ul>
+<li><code>Content-Type: application/pdf</code></li>
+</ul>
+</li>
+<li>メールを複数の構造に分割して作成する場合(テキストと画像などの複数の要素を含んでいる場合)
+<ul>
+<li><code>Content-Type: multipart/mixed</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Return-Path
+<ul>
+<li>宛先が存在しなかったなどの理由でメールサーバ間でメールが送信できなかったときにエラーメールを返す先を表す．</li>
+</ul>
+</li>
+<li>Received
+<ul>
+<li>メールを中継するサーバが別のサーバに向けて転送処理を行うたびにヘッダーに付加される情報になります．</li>
+<li>これによりメールが送信される際に通過したサーバの経路を特定することができます．</li>
+</ul>
+</li>
+</ul>
+<h1 id="メールを送信する際の認証">メールを送信する際の認証</h1>
+<ul>
+<li>メールの送信の際の認証が必要な理由
+<ul>
+<li>POPやIMAPでは受診の際にユーザID・パスワードなどでログインを行っていた</li>
+<li>SMTPでは送信の際に認証などを行わずに誰でも送信・転送可能</li>
+<li>スパムメールであふれてしまう可能性がある</li>
+</ul>
+</li>
+<li>SMTP AUTH(AMTP Authentication)
+<ul>
+<li>SMTPによってメールを送信する際にIDとパスワードを用いてそのユーザを認証する</li>
+<li><!-- raw HTML omitted -->SASL<!-- raw HTML omitted -->(Simple Authentication and Security Layer)と呼ばれるフレームワークにより様々な方法による認証が可能に</li>
+<li>認証方式
+<ul>
+<li>PLAIN
+<ul>
+<li>IDとパスワードを合わせて符号化してSMTPサーバーに送信する</li>
+<li><img src="http://ik1-322-21215.vs.sakura.ne.jp/images/20240712/smtp-auth.png" alt="smtp-auth"></li>
+</ul>
+</li>
+<li>LOGIN
+<ul>
+<li>最初にIDを送信して何度かSMTPサーバーとやり取りする中でパスワードを送信</li>
+<li>PLAINやLOGINでは認証情報は暗号化はされていないため，盗み見られるの可能性がある</li>
+</ul>
+</li>
+<li>CRAM-MD5
+<ul>
+<li>Challenge Response Authentication Mechanismの略</li>
+<li>処理の流れ
+<ul>
+<li>サーバ側に認証要求を送る</li>
+<li>SMTPサーバ側(認証する側)からクライアント側に「チャレンジ」と呼ばれる乱数文字列を送信</li>
+<li>クライアント側は送られてきた乱数文字列と自身のユーザ名・パスワードを用いてハッシュ化する</li>
+<li>この時にハッシュ関数としてMD5を使用
+<ul>
+<li>クライアントから届いたハッシュ化された文字列(パスワード+乱数文字列)</li>
+<li>サーバ側で保存されているパスワードと乱数文字列をハッシュ化したもの</li>
+<li>この2つを比較することで認証する</li>
+</ul>
+</li>
+<li>乱数文字列は毎回変わり，ハッシュ化されるため盗み見られるリスクがない</li>
+<li><img src="http://ik1-322-21215.vs.sakura.ne.jp/images/20240712/challenge_response.png" alt="CRAM"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SCRAM-SHA-1・SCRAM-SHA-256
+<ul>
+<li>Solted Challenge Response Authentication Mechanismの略</li>
+<li>サーバー側でパスワード自体を保存せずに認証が可能</li>
+<li>「ソルト」と呼ばれる，ユーザごとに異なる乱数文字列のこと
+<ul>
+<li>ユーザごとに異なる文字列なので，異なるユーザが同じパスワードを使用していた場合でも生成されるハッシュ値は異なるものになる</li>
+</ul>
+</li>
+<li>ここはもう少し勉強が必要そうです.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="op25b">OP25B</h1>
+<ul>
+<li>OP25B(Outbound Port 25 Blocking)の略
+<ul>
+<li>自分のネットワークから外部ネットワークへのTCP/25番ポートの通信を遮断すること</li>
+</ul>
+</li>
+<li>スパムメールなどは自分のネットワーク(プロバイダ)のSMTPサーバを使わずに標的のSMTPサーバのTCP/25番ポートに接続
+<ul>
+<li>このときSMTPでは認証機能がないため誰でも送信できてしまう</li>
+<li>プロバイダの管理外のSMTPサーバに対して接続しようとする(TCP/25)通信を遮断することで防ぐ
+<ul>
+<li>プロバイダ管理内のSMTPサーバの25番ポートには接続できると思います</li>
+<li>プロバイダ管理内で有れば認証しなくても誰が送信しているかわかるので</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SMTP AUTH
+<ul>
+<li>メールの送信に使うポートをTCP/587に変更してSMTP AUTHによるユーザ認証を行うことでスパムメールを防ぐ</li>
+<li>TCP/587をサブミッションポートと呼ぶ</li>
+</ul>
+</li>
+</ul>
+<h1 id="dnsサーバーについて">DNSサーバーについて</h1>
+<ul>
+<li>DNS(Domain Name System)はドメイン名とIPアドレスを紐づけることができる仕組み
+<ul>
+<li>あるサイトに接続する際にドメイン名から紐づいたIPアドレスを特定し，該当IPアドレスを持つホストと通信する．</li>
+</ul>
+</li>
+<li>DNSに記録されるレコードにはいくつかの種類がある
+<ul>
+<li>Aレコード
+<ul>
+<li>そのドメイン名に紐づいたIPv4アドレスを記録</li>
+</ul>
+</li>
+<li>AAAAレコード
+<ul>
+<li>そのドメイン名に紐づいたIPv6アドレスを記録</li>
+</ul>
+</li>
+<li>NSレコード
+<ul>
+<li>そのドメインの権威DNSサーバのホスト名</li>
+<li>権威DNSサーバ：ドメインを管理しているDNSサーバのこと</li>
+</ul>
+</li>
+<li>MXレコード
+<ul>
+<li>メールサーバのホスト名</li>
+</ul>
+</li>
+<li>TXTレコード
+<ul>
+<li>その他のメモやSPFやDKIMの情報など</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>実際にあるメールアドレスに対してメールを送る際はDNSを使ってそのドメイン名とIPアドレスを紐づけ，そのIPアドレス(メールサーバなど)に対して問い合わせる</li>
+</ul>
+<h1 id="メールにおける日本語の扱い方について">メールにおける日本語の扱い方について</h1>
+<ul>
+<li>メールではASCIIコードという文字コードに基づいて文字が表現されている
+<ul>
+<li>ASCIIコードは文字を7bitで表現しアルファベットの小文字・大文字や制御文字などを表現する</li>
+</ul>
+</li>
+<li>日本語などを扱うためにはShift JISやEUC-JPなどが使われている
+<ul>
+<li>これらの文字は2byte文字であるがASCIIコードは7bitであるため表現できない</li>
+<li>日本語独自の文字コードとしてISO-2022-JPが定められた</li>
+<li>制御文字を用いて全角，半角の切り替わりやアルファベットと日本語の切り替わりなどを判断</li>
+</ul>
+</li>
+<li>本文だけでなくメールのタイトルなどにも日本語が使えるように
+<ul>
+<li>「=?文字コード?符号方式?符号化後の文字列?=」と表現することでどの文字コードで符号化されているかがわかるように</li>
+<li>「=?ISO-2022-JP?B?xxxxxx?=」はISO-2020-JPという文字コードの文字列をBase64で符号化した結果がxxxxxxということ</li>
+</ul>
+</li>
+</ul>
+<h1 id="送信ドメイン認証">送信ドメイン認証</h1>
+<ul>
+<li>送信元を偽装したメールを送信できる理由
+<ul>
+<li>自分のアドレス以外を指定しても送信できてします</li>
+<li><!-- raw HTML omitted -->OP25BやSMTP AUTHはアカウントの認証をしているだけで，メールアドレス自体の認証はしていない<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>差出人に設定されたアドレスが正規のメールサーバを経由して送信されたものかを確認する必要がある
+<ul>
+<li>SPF(Sender Policy Framework)</li>
+<li>DKIM(Domain Keys Identified Mail)</li>
+<li>DMARC(Domain-based Message Authentication Reporting and Conformance)</li>
+</ul>
+</li>
+</ul>
+<h2 id="spf">SPF</h2>
+<ul>
+<li>SPF(Sender Policy Framework)とはエンベロープFromドメインと送信元メールサーバのIPアドレスが一致しているかどうかを受信側で確認する技術です．
+<ul>
+<li>ドメインとIPアドレスの関連を調べるのでDNSサーバを使用</li>
+<li>DNSレコードに対して「SPFレコード」と呼ばれる，そのドメインから送信されるメールに関する正当なメールサーバの情報をまとめたレコードを記述しておく</li>
+<li>＊メールの配送経路にリレーメールサーバがある場合は送信元のIPアドレスとエンベロープFromのドメインが使用するメールサーバのIPが一致しない
+<img src="http://ik1-322-21215.vs.sakura.ne.jp/images/20240712/SPF.png" alt="SPF"></li>
+</ul>
+</li>
+<li>SPFだけではエンベロープFromのドメインと送信元のIPが一致しているかを見ているだけ
+<ul>
+<li>攻撃者が用意したドメインに対するDNSサーバにSPFレコードを設定していた場合，IPアドレス自体は一致するのでSPFは成功してしまう</li>
+</ul>
+</li>
+</ul>
+<h2 id="dkim">DKIM</h2>
+<ul>
+<li>DKIM(Domain Keys Identified Mail)
+<ul>
+<li>公開鍵暗号方式を用いた送信元ドメイン認証の仕組み</li>
+<li>本文などをもとに作成したデジタル署名をメールに付加して受信側のメールサーバでデジタル署名を検証する技術</li>
+<li>処理の流れ
+<ul>
+<li>送信側は前もって，公開鍵と秘密鍵を用意し，公開鍵をDNSサーバに登録する(DKIMレコードという形で)</li>
+<li>メールの送信時にメールの本文・ヘッダーなどからハッシュ値を計算して秘密鍵で暗号化したものを署名とする</li>
+<li>受信側は付加されたデジタル署名をDNSに登録された公開鍵を用いて復号し，ハッシュ値を得る</li>
+<li>受信したメールからハッシュ値を取得し，復号して得られたハッシュ値を比較する</li>
+<li>これらが一致した場合，正規のユーザから送信されたことがわかる</li>
+</ul>
+</li>
+<li>DKIMでは送信元を認証するだけでなく，メールが改ざんされていないことの確認もできる
+<ul>
+<li>メールの内容が変わるとハッシュ値が異なるものになるため</li>
+</ul>
+</li>
+<li>SPFと同様に，攻撃者が用意したドメインに対するDNSサーバにDKIMレコードを設定していた場合，ハッシュ値自体は一致してしまうので認証は成功してしまう．</li>
+<li>送信者側の秘密鍵が漏洩することも考えられるため定期的に鍵を変更・DNSサーバへの再登録が必要</li>
+</ul>
+</li>
+</ul>
+<h2 id="dmarc">DMARC</h2>
+<ul>
+<li>DMARC(Domain-based Message Authentication Reporting and Conformance)
+<ul>
+<li>SPFやDKIMの認証結果をどのように処理するかを指定することができる
+<ul>
+<li>受信側のメールサーバはエンベロープFROMに記述されたドメインのDNSサーバよりDMARCレコードを取得する</li>
+<li>SPFやDKIMの認証結果について確認する</li>
+<li>認証が成功していた場合はそのメールを受信する</li>
+<li>失敗した場合の対応について記述することができる
+<ul>
+<li>そのまま許可する・隔離する・拒否するのいづれか</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>認証の結果についてのレポートを受信メールサーバのドメインの持ち主へ通知することもできる</li>
+</ul>
+</li>
+</ul>
+<h2 id="dnssec">DNSSEC</h2>
+<ul>
+<li>DNSキャッシュポイズニングを防ぐための技術
+<ul>
+<li>DNSキャッシュポイズニングとは
+<ul>
+<li>フルサービスリゾルバー(キャッシュDNSサーバ)が権威DNSサーバに問い合わせを行う際に，攻撃者が用意した偽のDNSサーバが正規のDNSサーバよりも先に応答を返すことで，誤った内容をキャッシュさせ偽のサイトに誘導する攻撃</li>
+</ul>
+</li>
+<li>DNSSECとは
+<ul>
+<li>権威DNSサーバからの応答が改ざんされておらず，かつ正しい相手からの通信であることを保証する技術</li>
+<li>問い合わせを受けた権威DNSサーバは応答時にDNSデータだけでなく，デジタル署名を付加して応答する</li>
+<li>この署名を検証することで応答してきたDNSサーバが正規のDNSサーバであることを確認できる</li>
+</ul>
+</li>
+<li>検証に使う公開鍵の管理方法について
+<ul>
+<li>DNSは階層構造をとっている</li>
+<li>自身の公開鍵をハッシュ化して親DNSサーバに送付する</li>
+<li>親DNSサーバは送られてきたハッシュ値を自身の秘密鍵で暗号化し，さらに上の親DNSサーバに送付する</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考">参考</h1>
+<ul>
+<li>実務で使えるメール技術の教科書
+<ul>
+<li><a href="https://www.shoeisha.co.jp/book/detail/9784798183930">https://www.shoeisha.co.jp/book/detail/9784798183930</a></li>
+</ul>
+</li>
+<li>構造計画研究所[日本語メールの仕組み]
+<ul>
+<li><a href="https://sendgrid.kke.co.jp/blog/?p=10958">https://sendgrid.kke.co.jp/blog/?p=10958</a></li>
+</ul>
+</li>
+<li><a href="https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html">https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html</a></li>
+<li><a href="https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf">https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf</a></li>
+<li><a href="https://www.tohoho-web.com/ex/draft/smtp-auth.htm">https://www.tohoho-web.com/ex/draft/smtp-auth.htm</a></li>
+</ul>
+<h1 id="最後に">最後に</h1>
+<p>今回はメール周りについて勉強したことをまとめてみました．
+先日VPSも契約したので時間があればメールサーバとか立ててみたいですね．
+メールヘッダーのこととかあんまりちゃんと考えたことなかったのでとても興味深かったです．</p>
+
+
+        
+          <div class="blog-tags">
+            
+              
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/tags/smtp/">SMTP</a>&nbsp;
+            
+              
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/tags/dns/">DNS</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://ik1-322-21215.vs.sakura.ne.jp/post/20240710/20240710/" data-toggle="tooltip" data-placement="top" title="RSA暗号について">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+  
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            
+              <a href="https://github.com/yuudee"
+                title="GitHub">
+                
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+          </li>
+          <li>
+            
+              <a href="https://twitter.com/yuu__dee"
+                title="Twitter">
+                
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="http://ik1-322-21215.vs.sakura.ne.jp/">yuudee</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2024
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="http://ik1-322-21215.vs.sakura.ne.jp/">@yuudee</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.127.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+  integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+  integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/main.js"></script>
+<script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://ik1-322-21215.vs.sakura.ne.jp/%20js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css"
+    integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"
+    integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            delimiters: [
+                
+                { left: "$", right: "$", display: false }]
+        });
+    });
+</script>
+  
+</body>
+
+</html>

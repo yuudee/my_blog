@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on @yuudee</title>
+    <link>http://ik1-322-21215.vs.sakura.ne.jp/tags/github/</link>
+    <description>Recent content in Github on @yuudee</description>
+    <generator>Hugo</generator>
+    <language>jp</language>
+    <lastBuildDate>Mon, 01 Jul 2024 14:03:33 +0900</lastBuildDate>
+    <atom:link href="http://ik1-322-21215.vs.sakura.ne.jp/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HugoとGithub pagesでブログサイトを構築する</title>
+      <link>http://ik1-322-21215.vs.sakura.ne.jp/post/20240701/20240701/</link>
+      <pubDate>Mon, 01 Jul 2024 14:03:33 +0900</pubDate>
+      <guid>http://ik1-322-21215.vs.sakura.ne.jp/post/20240701/20240701/</guid>
+      <description>はじめに 今回は静的サイトジェネレータHugoを用いてブログサイトを構築・Github pagesにデプ</description>
+    </item>
+  </channel>
+</rss>
