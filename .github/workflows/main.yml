@@ -24,10 +24,10 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Build the site
-      run: hugo
+      run: hugo --minify
 
     - name: Deploy to VPS
-      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -p $SSH_PORT -i ./key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+      run: rsync -e 'ssh -p $SSH_PORT -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' -rlptgoD --delete --exclude ".git/" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
       env:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
