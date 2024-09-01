@@ -1,0 +1,55 @@
+baseURL = "http://ik1-322-21215.vs.sakura.ne.jp"
+languageCode = "jp"
+title = "@yuudee"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+publishDir = "docs"
+canonifyurls = true
+hasCJKLanguage = true
+summaryLength = 50
+
+[Params]
+  logo = "http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" # Expecting square dimensions
+  favicon = "sample.png"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = false
+  mainSections = ["post","posts"]
+  comments = true
+  readingTime = false
+  wordCount = false
+  useHLJS = true
+  socialShare = false
+  delayDisqus = true
+  showRelatedPosts = true
+  since = "2024"
+
+[Author]
+  name = "yuudee"
+  github = "yuudee"
+  twitter = "yuu__dee"
+  website = "http://ik1-322-21215.vs.sakura.ne.jp/"
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "Book"
+    url = "/page/book/"
+    weight = 1
+
+[[menu.main]]
+    name = "About Me"
+    url = "page/about/"
+    weight = 3
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3

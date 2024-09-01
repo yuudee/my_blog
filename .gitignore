@@ -1,12 +1,1 @@
-themes/beautifulhugo/
-archetypes/
-assets/
-content/
-data/
-i18n/
-layouts/
-static/
-themes/
-.hugo_build.lock
-hugo.toml
 test.bat
