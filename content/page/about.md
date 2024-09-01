@@ -36,6 +36,8 @@ title : '自己紹介'
 - 連合学習
 
 # 参加したイベント・大会など
+
+## CTF関係
 - picoCTF 2024
 - DIVER OSINT CTF 2024
   - 104位
@@ -43,3 +45,6 @@ title : '自己紹介'
   - 513位
 - WaniCTF 2024
   - 420位
+
+## セキュリティ関係
+- P3NFEST 2024 SUMMER(online参加)
