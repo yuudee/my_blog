@@ -11,8 +11,7 @@ title : '自己紹介'
   - X(旧Twitter)
     - https://x.com/yuu__dee
   - Github
-    - ほとんど更新していませんが…
-    - なるべく更新していきたいです．
+    - ほとんど更新してできていないのでなるべく更新したいと思います
     - https://github.com/yuudee
 
 # 保有資格
