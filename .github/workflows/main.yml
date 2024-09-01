@@ -24,7 +24,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Build the site
-      run: hugo --minify
+      run: hugo
 
     - name: Deploy to VPS
       run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -p ${SSH_PORT} -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
