@@ -3,7 +3,7 @@ name: Deploy Hugo site to VPS
 on:
   push:
     branches:
-      - main  # デプロイをトリガーするブランチ
+      - master
 
 jobs:
   build:
