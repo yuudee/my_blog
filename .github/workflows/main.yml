@@ -1,4 +1,4 @@
-name: Deploy Hugo site to VPS
+name: Deploy Hugo to VPS using rsync
 
 on:
   push:
@@ -21,13 +21,13 @@ jobs:
     - name: Install SSH key
       run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Build the site
-      run: hugo
+      run: hugo --minify
 
     - name: Deploy to VPS
-      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i ./key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -p ${SSH_PORT} -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
       env:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
