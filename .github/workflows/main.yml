@@ -16,7 +16,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.133.1'
+        hugo-version: '0.127.0'
 
     - name: Install SSH key
       run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
@@ -27,8 +27,7 @@ jobs:
       run: hugo
 
     - name: Deploy to VPS
-      run: |
-        run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i ./key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i ./key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
       env:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
