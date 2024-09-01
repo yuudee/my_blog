@@ -27,7 +27,7 @@ jobs:
       run: hugo
 
     - name: Deploy to VPS
-      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i ./key -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -p $SSH_PORT" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i ./key -p $SSH_PORT -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null'" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
       env:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
