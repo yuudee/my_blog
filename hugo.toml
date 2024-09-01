@@ -1,4 +1,4 @@
-baseURL = "http://ik1-322-21215.vs.sakura.ne.jp"
+baseURL = "https://yuudee.net"
 languageCode = "jp"
 title = "@yuudee"
 theme = "beautifulhugo"
@@ -13,7 +13,7 @@ hasCJKLanguage = true
 summaryLength = 50
 
 [Params]
-  logo = "http://ik1-322-21215.vs.sakura.ne.jp/images/howl012.jpg" # Expecting square dimensions
+  logo = "https://yuudee.net/images/howl012.jpg" # Expecting square dimensions
   favicon = "sample.png"
   dateFormat = "January 2, 2006"
   commit = false
