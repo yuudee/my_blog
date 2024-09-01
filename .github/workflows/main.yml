@@ -1,4 +1,4 @@
-name: Deploy Hugo to VPS
+name: Deploy Hugo to VPS using rsync
 
 on:
   push:
