@@ -32,7 +32,7 @@ summaryLength = 50
   name = "yuudee"
   github = "yuudee"
   twitter = "yuu__dee"
-  website = "http://ik1-322-21215.vs.sakura.ne.jp/"
+  website = "https://yuudee.net/"
 
 [[menu.main]]
     name = "Blog"
