@@ -1,0 +1,36 @@
+name: Deploy Hugo to VPS using rsync
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v3
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.134.2'
+
+    - name: Install SSH key
+      run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Build the site
+      run: hugo
+
+    - name: Deploy to VPS
+      run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -p ${SSH_PORT} -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" docs/ $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+      env:
+        SSH_USER: ${{ secrets.SSH_USER }}
+        SSH_PORT: ${{ secrets.SSH_PORT }}
+        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        
