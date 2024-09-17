@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on yuudee&#39;s blog</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on yuudee&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>japanese</language>
+    <lastBuildDate>Sat, 14 Sep 2024 18:53:37 +0900</lastBuildDate><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己紹介</title>
+      <link>http://localhost:1313/pages/about/</link>
+      <pubDate>Sat, 14 Sep 2024 18:53:37 +0900</pubDate>
+      
+      <guid>http://localhost:1313/pages/about/</guid>
+      
+      <description>&lt;h1 id=&#34;自己紹介&#34;&gt;自己紹介&lt;/h1&gt;
+&lt;p&gt;地方国立大のM2です．
+普段はAIやネットワーク・セキュリティ関連の勉強してます．
+技術全般に興味があります．
+このブログはあくまでも自分の備忘録的なものです．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各種SNSリンク
+&lt;ul&gt;
+&lt;li&gt;X(旧Twitter)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://x.com/yuu__dee&#34;&gt;https://x.com/yuu__dee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Github
+&lt;ul&gt;
+&lt;li&gt;ほとんど更新してできていないのでなるべく更新したいと思います&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yuudee&#34;&gt;https://github.com/yuudee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;保有資格&#34;&gt;保有資格&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;基本情報技術者(2020年春取得)&lt;/li&gt;
+&lt;li&gt;応用情報技術者(2024年春取得)&lt;/li&gt;
+&lt;li&gt;情報処理安全確保支援士(勉強中・2024年秋での合格を目指してます)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;好きなこと経験&#34;&gt;好きなこと・経験&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CTF
+&lt;ul&gt;
+&lt;li&gt;まだまだ初心者ですが…&lt;/li&gt;
+&lt;li&gt;個人的に好きな分野はforensicsです(得意というわけではありません).&lt;/li&gt;
+&lt;li&gt;学生の間にpicoCTFなどの常設CTFでしっかり基本からやりたいなとか思ってます．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ネットワーク・セキュリティ周りの勉強
+&lt;ul&gt;
+&lt;li&gt;THMとかHTBとか本格的にやりたいと思ってるところです.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Xで面白そうな記事・ブログ探し&lt;br&gt;
+などなど…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;今後勉強したい分野キーワード&#34;&gt;今後勉強したい分野・キーワード&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;docker・k8s&lt;/li&gt;
+&lt;li&gt;ゼロトラスト&lt;/li&gt;
+&lt;li&gt;暗号周り&lt;/li&gt;
+&lt;li&gt;連合学習&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参加したイベント大会など&#34;&gt;参加したイベント・大会など&lt;/h1&gt;
+&lt;h2 id=&#34;ctf関係&#34;&gt;CTF関係&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;picoCTF 2024&lt;/li&gt;
+&lt;li&gt;DIVER OSINT CTF 2024
+&lt;ul&gt;
+&lt;li&gt;104位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SECCON BEGINNERS CTF 2024
+&lt;ul&gt;
+&lt;li&gt;513位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WaniCTF 2024
+&lt;ul&gt;
+&lt;li&gt;420位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;セキュリティ関係&#34;&gt;セキュリティ関係&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;P3NFEST 2024 SUMMER(online参加)&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>読んだ本リスト・読みたい本リスト</title>
+      <link>http://localhost:1313/pages/book/</link>
+      <pubDate>Sat, 14 Sep 2024 18:53:37 +0900</pubDate>
+      
+      <guid>http://localhost:1313/pages/book/</guid>
+      
+      <description>&lt;h2 id=&#34;読んだ本リスト&#34;&gt;読んだ本リスト&lt;/h2&gt;
+&lt;h3 id=&#34;技術書&#34;&gt;技術書&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;情報セキュリティの敗北史
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hakuyo-sha.co.jp/science/security/&#34;&gt;https://www.hakuyo-sha.co.jp/science/security/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;今の僕には少し難しすぎたかもしれないです…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;マスタリングTCP/IP 入門編
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ohmsha.co.jp/book/9784274224478/&#34;&gt;https://www.ohmsha.co.jp/book/9784274224478/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ネットワークに興味がある人にはぜひ読んでもらいたい本です.&lt;/li&gt;
+&lt;li&gt;私もこれ読んでネットワークへの理解がかなり深まった印象です．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技術書の読書術
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798171548&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798171548&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;「技術書の読書術」といいつつ技術書以外にも使えそうなテクニックが書かれています．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;世界一流エンジニアの思考法
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://books.bunshun.jp/ud/book/num/9784163917689&#34;&gt;https://books.bunshun.jp/ud/book/num/9784163917689&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;技術面だけでなくメンタル面や日ごろの生活の観点からも書かれていて面白かったです．&lt;/li&gt;
+&lt;li&gt;時間があるときにもう一度読みたいです．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;「メール技術」の教科書
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183930&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183930&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人的にメール周りに触れる機会があり，勉強してみたくなって読んでみました．&lt;/li&gt;
+&lt;li&gt;メール技術に特化した本ってあまりないのでとても勉強になりました．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ビジネス自己啓発&#34;&gt;ビジネス・自己啓発&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;「もう怒らない」ための本
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ascom-inc.jp/books/detail/978-4-7762-0899-0.html&#34;&gt;https://www.ascom-inc.jp/books/detail/978-4-7762-0899-0.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;僕自身少しイライラしやすいところがあり，もう少し気楽に過ごしていきたいなと思い本屋でなんとなく手に取った本です．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;その他&#34;&gt;その他&lt;/h3&gt;
+&lt;h2 id=&#34;読みたい本リスト&#34;&gt;読みたい本リスト&lt;/h2&gt;
+&lt;h3 id=&#34;技術書-1&#34;&gt;技術書&lt;/h3&gt;
+&lt;h3 id=&#34;ビジネス自己啓発-1&#34;&gt;ビジネス・自己啓発&lt;/h3&gt;
+&lt;h3 id=&#34;その他-1&#34;&gt;その他&lt;/h3&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

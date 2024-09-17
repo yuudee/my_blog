@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="japanese"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">メール周りの技術について | yuudee&#39;s blog</title>
+<meta property="og:title" content="メール周りの技術について | yuudee&#39;s blog" />
+<meta name="twitter:title" content="メール周りの技術について | yuudee&#39;s blog" />
+<meta itemprop="name" content="メール周りの技術について | yuudee&#39;s blog" />
+<meta name="application-name" content="メール周りの技術について | yuudee&#39;s blog" />
+<meta property="og:site_name" content="yuudee&#39;s blog" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="japanese" />
+<meta name="language" content="japanese" />
+
+  <link rel="alternate" hreflang="japanese" href="http://localhost:1313/posts/about_mail_tech/" title="Japanese" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-07-08T11:17:09&#43;0900 />
+    <meta property="article:published_time" content=2024-07-08T11:17:09&#43;0900 />
+    <meta property="og:url" content="http://localhost:1313/posts/about_mail_tech/" />
+
+    
+    <meta property="og:article:author" content="yuudee " />
+    <meta property="article:author" content="yuudee " />
+    <meta name="author" content="yuudee " />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "メール周りの技術について",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-07-08",
+        "description": "",
+        "wordCount":  236 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-07-08",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "yuudee\u0027s blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.134.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/about_mail_tech/">
+  <meta property="og:site_name" content="yuudee&#39;s blog">
+  <meta property="og:title" content="メール周りの技術について">
+  <meta property="og:description" content="SMTP,POP,IMAPについて SMTPとは SMTP(Simple Mail Transfer Protocol)の略で名前の通りメールを転送・送信するためのプロトコルです． SMTPサーバに接続することでメールの転送・送信が可能になります． その際にクライアントからSMTPサーバへの接続は25番ポートに対してTelnetを使って行われます． 後程紹介するOP25Bにより25番ポートは使われない場合が多いです． イメージとしてはTCP/IPの3way hand shakeみたいな感じで互いにやり取りしてる感じです． POPとは POP(Post Office Protocol)とはメールの受信に用いられるプロトコルでありSMTPは送信を担っているのに対してこちらは受信を担っています． 受信したメールをローカルにダウンロードしたのちにメールサーバからは該当のメールが削除されるため一度ダウンロードするとその端末以外からは見れなくなります． IMAPとは IMAP(Internet Message Access Protocol)はPOPと同様にメールを受信するためのプロトコルです． POPとは異なりメールサーバー上でメールの管理を行っているため複数の端末で同一のメールを閲覧することができ，ある端末で閲覧してもサーバー上から削除はされません． あくまでもローカルにコピーをとっているようなイメージです． なのでPOPとIMAPはメールを管理する場所が違うという感じです． POP：ローカルの端末 IMAP：メールサーバ上 メールの構造について SMTPでメールを送信する際，メール本文の宛先をもとに送信するわけではない 封筒の役割を果たすエンベロープを参照している． エンベロープに書かれている送信者をエンベロープFrom，宛先をエンベロープToという． エンベロープFromと本文のFromや，エンベロープToと本文のToが異なる場合がある． 企業のメールマガジンの配信などで，送信に使うメールサーバに外部のメールサーバを使いたいとき エンベロープFromは外部のメールサーバ，本文のFromは企業名などにしておくなど エンベロープFromを偽装することでエラーメールを用いて特定のメールアドレスに大量のメールを送り付ける方法がある メールヘッダーについて メールヘッダーには送信先[To]や送信元[From]，件名[Subject]のほかに送信日時を表す[Date]やメールを一意に識別するための[Message-ID]などの様々な情報が付加されています． また，MIME(Multipurpose Internet Mail Extension)と呼ばれるようなメールに文字列以外の画像やPDFなどのファイルを添付するための拡張機能などでは，添付ファイルごとにヘッダーと本文を繰り返すような構造をとっています． ヘッダーには[MIME-Version:1.0]などが付加されます． Content-type メール本文の形式を指定するもので，メールにテキストや画像，音声，動画などを添付する際にその種類が指定されています． テキスト形式の場合 Content-Type: text/plain;charset=UTF-8 画像の場合 Content-Type: image/png 動画の場合 Content-Type: video/mp4 PDFの場合 Content-Type: application/pdf メールを複数の構造に分割して作成する場合(テキストと画像などの複数の要素を含んでいる場合) Content-Type: multipart/mixed Return-Path 宛先が存在しなかったなどの理由でメールサーバ間でメールが送信できなかったときにエラーメールを返す先を表す． Received メールを中継するサーバが別のサーバに向けて転送処理を行うたびにヘッダーに付加される情報になります． これによりメールが送信される際に通過したサーバの経路を特定することができます． メールを送信する際の認証 メールの送信の際の認証が必要な理由 POPやIMAPでは受診の際にユーザID・パスワードなどでログインを行っていた SMTPでは送信の際に認証などを行わずに誰でも送信・転送可能 スパムメールであふれてしまう可能性がある SMTP AUTH(AMTP Authentication) SMTPによってメールを送信する際にIDとパスワードを用いてそのユーザを認証する SASL(Simple Authentication and Security Layer)と呼ばれるフレームワークにより様々な方法による認証が可能に 認証方式 PLAIN IDとパスワードを合わせて符号化してSMTPサーバーに送信する LOGIN 最初にIDを送信して何度かSMTPサーバーとやり取りする中でパスワードを送信 PLAINやLOGINでは認証情報は暗号化はされていないため，盗み見られるの可能性がある CRAM-MD5 Challenge Response Authentication Mechanismの略 処理の流れ サーバ側に認証要求を送る SMTPサーバ側(認証する側)からクライアント側に「チャレンジ」と呼ばれる乱数文字列を送信 クライアント側は送られてきた乱数文字列と自身のユーザ名・パスワードを用いてハッシュ化する この時にハッシュ関数としてMD5を使用 クライアントから届いたハッシュ化された文字列(パスワード&#43;乱数文字列) サーバ側で保存されているパスワードと乱数文字列をハッシュ化したもの この2つを比較することで認証する 乱数文字列は毎回変わり，ハッシュ化されるため盗み見られるリスクがない SCRAM-SHA-1・SCRAM-SHA-256 Solted Challenge Response Authentication Mechanismの略 サーバー側でパスワード自体を保存せずに認証が可能 「ソルト」と呼ばれる，ユーザごとに異なる乱数文字列のこと ユーザごとに異なる文字列なので，異なるユーザが同じパスワードを使用していた場合でも生成されるハッシュ値は異なるものになる ここはもう少し勉強が必要そうです. OP25B OP25B(Outbound Port 25 Blocking)の略 自分のネットワークから外部ネットワークへのTCP/25番ポートの通信を遮断すること スパムメールなどは自分のネットワーク(プロバイダ)のSMTPサーバを使わずに標的のSMTPサーバのTCP/25番ポートに接続 このときSMTPでは認証機能がないため誰でも送信できてしまう プロバイダの管理外のSMTPサーバに対して接続しようとする(TCP/25)通信を遮断することで防ぐ プロバイダ管理内のSMTPサーバの25番ポートには接続できると思います プロバイダ管理内で有れば認証しなくても誰が送信しているかわかるので SMTP AUTH メールの送信に使うポートをTCP/587に変更してSMTP AUTHによるユーザ認証を行うことでスパムメールを防ぐ TCP/587をサブミッションポートと呼ぶ DNSサーバーについて DNS(Domain Name System)はドメイン名とIPアドレスを紐づけることができる仕組み あるサイトに接続する際にドメイン名から紐づいたIPアドレスを特定し，該当IPアドレスを持つホストと通信する． DNSに記録されるレコードにはいくつかの種類がある Aレコード そのドメイン名に紐づいたIPv4アドレスを記録 AAAAレコード そのドメイン名に紐づいたIPv6アドレスを記録 NSレコード そのドメインの権威DNSサーバのホスト名 権威DNSサーバ：ドメインを管理しているDNSサーバのこと MXレコード メールサーバのホスト名 TXTレコード その他のメモやSPFやDKIMの情報など 実際にあるメールアドレスに対してメールを送る際はDNSを使ってそのドメイン名とIPアドレスを紐づけ，そのIPアドレス(メールサーバなど)に対して問い合わせる メールにおける日本語の扱い方について メールではASCIIコードという文字コードに基づいて文字が表現されている ASCIIコードは文字を7bitで表現しアルファベットの小文字・大文字や制御文字などを表現する 日本語などを扱うためにはShift JISやEUC-JPなどが使われている これらの文字は2byte文字であるがASCIIコードは7bitであるため表現できない 日本語独自の文字コードとしてISO-2022-JPが定められた 制御文字を用いて全角，半角の切り替わりやアルファベットと日本語の切り替わりなどを判断 本文だけでなくメールのタイトルなどにも日本語が使えるように 「=?文字コード?符号方式?符号化後の文字列?=」と表現することでどの文字コードで符号化されているかがわかるように 「=?ISO-2022-JP?B?xxxxxx?=」はISO-2020-JPという文字コードの文字列をBase64で符号化した結果がxxxxxxということ 送信ドメイン認証 送信元を偽装したメールを送信できる理由 自分のアドレス以外を指定しても送信できてします OP25BやSMTP AUTHはアカウントの認証をしているだけで，メールアドレス自体の認証はしていない 差出人に設定されたアドレスが正規のメールサーバを経由して送信されたものかを確認する必要がある SPF(Sender Policy Framework) DKIM(Domain Keys Identified Mail) DMARC(Domain-based Message Authentication Reporting and Conformance) SPF SPF(Sender Policy Framework)とはエンベロープFromドメインと送信元メールサーバのIPアドレスが一致しているかどうかを受信側で確認する技術です． ドメインとIPアドレスの関連を調べるのでDNSサーバを使用 DNSレコードに対して「SPFレコード」と呼ばれる，そのドメインから送信されるメールに関する正当なメールサーバの情報をまとめたレコードを記述しておく ＊メールの配送経路にリレーメールサーバがある場合は送信元のIPアドレスとエンベロープFromのドメインが使用するメールサーバのIPが一致しない SPFだけではエンベロープFromのドメインと送信元のIPが一致しているかを見ているだけ 攻撃者が用意したドメインに対するDNSサーバにSPFレコードを設定していた場合，IPアドレス自体は一致するのでSPFは成功してしまう DKIM DKIM(Domain Keys Identified Mail) 公開鍵暗号方式を用いた送信元ドメイン認証の仕組み 本文などをもとに作成したデジタル署名をメールに付加して受信側のメールサーバでデジタル署名を検証する技術 処理の流れ 送信側は前もって，公開鍵と秘密鍵を用意し，公開鍵をDNSサーバに登録する(DKIMレコードという形で) メールの送信時にメールの本文・ヘッダーなどからハッシュ値を計算して秘密鍵で暗号化したものを署名とする 受信側は付加されたデジタル署名をDNSに登録された公開鍵を用いて復号し，ハッシュ値を得る 受信したメールからハッシュ値を取得し，復号して得られたハッシュ値を比較する これらが一致した場合，正規のユーザから送信されたことがわかる DKIMでは送信元を認証するだけでなく，メールが改ざんされていないことの確認もできる メールの内容が変わるとハッシュ値が異なるものになるため SPFと同様に，攻撃者が用意したドメインに対するDNSサーバにDKIMレコードを設定していた場合，ハッシュ値自体は一致してしまうので認証は成功してしまう． 送信者側の秘密鍵が漏洩することも考えられるため定期的に鍵を変更・DNSサーバへの再登録が必要 DMARC DMARC(Domain-based Message Authentication Reporting and Conformance) SPFやDKIMの認証結果をどのように処理するかを指定することができる 受信側のメールサーバはエンベロープFROMに記述されたドメインのDNSサーバよりDMARCレコードを取得する SPFやDKIMの認証結果について確認する 認証が成功していた場合はそのメールを受信する 失敗した場合の対応について記述することができる そのまま許可する・隔離する・拒否するのいづれか 認証の結果についてのレポートを受信メールサーバのドメインの持ち主へ通知することもできる DNSSEC DNSキャッシュポイズニングを防ぐための技術 DNSキャッシュポイズニングとは フルサービスリゾルバー(キャッシュDNSサーバ)が権威DNSサーバに問い合わせを行う際に，攻撃者が用意した偽のDNSサーバが正規のDNSサーバよりも先に応答を返すことで，誤った内容をキャッシュさせ偽のサイトに誘導する攻撃 DNSSECとは 権威DNSサーバからの応答が改ざんされておらず，かつ正しい相手からの通信であることを保証する技術 問い合わせを受けた権威DNSサーバは応答時にDNSデータだけでなく，デジタル署名を付加して応答する この署名を検証することで応答してきたDNSサーバが正規のDNSサーバであることを確認できる 検証に使う公開鍵の管理方法について DNSは階層構造をとっている 自身の公開鍵をハッシュ化して親DNSサーバに送付する 親DNSサーバは送られてきたハッシュ値を自身の秘密鍵で暗号化し，さらに上の親DNSサーバに送付する 参考 実務で使えるメール技術の教科書 https://www.shoeisha.co.jp/book/detail/9784798183930 構造計画研究所[日本語メールの仕組み] https://sendgrid.kke.co.jp/blog/?p=10958 https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf https://www.tohoho-web.com/ex/draft/smtp-auth.htm 最後に 今回はメール周りについて勉強したことをまとめてみました． 先日VPSも契約したので時間があればメールサーバとか立ててみたいですね． メールヘッダーのこととかあんまりちゃんと考えたことなかったのでとても興味深かったです．">
+  <meta property="og:locale" content="japanese">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-08T11:17:09+09:00">
+    <meta property="article:modified_time" content="2024-07-08T11:17:09+09:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="メール周りの技術について">
+  <meta name="twitter:description" content="SMTP,POP,IMAPについて SMTPとは SMTP(Simple Mail Transfer Protocol)の略で名前の通りメールを転送・送信するためのプロトコルです． SMTPサーバに接続することでメールの転送・送信が可能になります． その際にクライアントからSMTPサーバへの接続は25番ポートに対してTelnetを使って行われます． 後程紹介するOP25Bにより25番ポートは使われない場合が多いです． イメージとしてはTCP/IPの3way hand shakeみたいな感じで互いにやり取りしてる感じです． POPとは POP(Post Office Protocol)とはメールの受信に用いられるプロトコルでありSMTPは送信を担っているのに対してこちらは受信を担っています． 受信したメールをローカルにダウンロードしたのちにメールサーバからは該当のメールが削除されるため一度ダウンロードするとその端末以外からは見れなくなります． IMAPとは IMAP(Internet Message Access Protocol)はPOPと同様にメールを受信するためのプロトコルです． POPとは異なりメールサーバー上でメールの管理を行っているため複数の端末で同一のメールを閲覧することができ，ある端末で閲覧してもサーバー上から削除はされません． あくまでもローカルにコピーをとっているようなイメージです． なのでPOPとIMAPはメールを管理する場所が違うという感じです． POP：ローカルの端末 IMAP：メールサーバ上 メールの構造について SMTPでメールを送信する際，メール本文の宛先をもとに送信するわけではない 封筒の役割を果たすエンベロープを参照している． エンベロープに書かれている送信者をエンベロープFrom，宛先をエンベロープToという． エンベロープFromと本文のFromや，エンベロープToと本文のToが異なる場合がある． 企業のメールマガジンの配信などで，送信に使うメールサーバに外部のメールサーバを使いたいとき エンベロープFromは外部のメールサーバ，本文のFromは企業名などにしておくなど エンベロープFromを偽装することでエラーメールを用いて特定のメールアドレスに大量のメールを送り付ける方法がある メールヘッダーについて メールヘッダーには送信先[To]や送信元[From]，件名[Subject]のほかに送信日時を表す[Date]やメールを一意に識別するための[Message-ID]などの様々な情報が付加されています． また，MIME(Multipurpose Internet Mail Extension)と呼ばれるようなメールに文字列以外の画像やPDFなどのファイルを添付するための拡張機能などでは，添付ファイルごとにヘッダーと本文を繰り返すような構造をとっています． ヘッダーには[MIME-Version:1.0]などが付加されます． Content-type メール本文の形式を指定するもので，メールにテキストや画像，音声，動画などを添付する際にその種類が指定されています． テキスト形式の場合 Content-Type: text/plain;charset=UTF-8 画像の場合 Content-Type: image/png 動画の場合 Content-Type: video/mp4 PDFの場合 Content-Type: application/pdf メールを複数の構造に分割して作成する場合(テキストと画像などの複数の要素を含んでいる場合) Content-Type: multipart/mixed Return-Path 宛先が存在しなかったなどの理由でメールサーバ間でメールが送信できなかったときにエラーメールを返す先を表す． Received メールを中継するサーバが別のサーバに向けて転送処理を行うたびにヘッダーに付加される情報になります． これによりメールが送信される際に通過したサーバの経路を特定することができます． メールを送信する際の認証 メールの送信の際の認証が必要な理由 POPやIMAPでは受診の際にユーザID・パスワードなどでログインを行っていた SMTPでは送信の際に認証などを行わずに誰でも送信・転送可能 スパムメールであふれてしまう可能性がある SMTP AUTH(AMTP Authentication) SMTPによってメールを送信する際にIDとパスワードを用いてそのユーザを認証する SASL(Simple Authentication and Security Layer)と呼ばれるフレームワークにより様々な方法による認証が可能に 認証方式 PLAIN IDとパスワードを合わせて符号化してSMTPサーバーに送信する LOGIN 最初にIDを送信して何度かSMTPサーバーとやり取りする中でパスワードを送信 PLAINやLOGINでは認証情報は暗号化はされていないため，盗み見られるの可能性がある CRAM-MD5 Challenge Response Authentication Mechanismの略 処理の流れ サーバ側に認証要求を送る SMTPサーバ側(認証する側)からクライアント側に「チャレンジ」と呼ばれる乱数文字列を送信 クライアント側は送られてきた乱数文字列と自身のユーザ名・パスワードを用いてハッシュ化する この時にハッシュ関数としてMD5を使用 クライアントから届いたハッシュ化された文字列(パスワード&#43;乱数文字列) サーバ側で保存されているパスワードと乱数文字列をハッシュ化したもの この2つを比較することで認証する 乱数文字列は毎回変わり，ハッシュ化されるため盗み見られるリスクがない SCRAM-SHA-1・SCRAM-SHA-256 Solted Challenge Response Authentication Mechanismの略 サーバー側でパスワード自体を保存せずに認証が可能 「ソルト」と呼ばれる，ユーザごとに異なる乱数文字列のこと ユーザごとに異なる文字列なので，異なるユーザが同じパスワードを使用していた場合でも生成されるハッシュ値は異なるものになる ここはもう少し勉強が必要そうです. OP25B OP25B(Outbound Port 25 Blocking)の略 自分のネットワークから外部ネットワークへのTCP/25番ポートの通信を遮断すること スパムメールなどは自分のネットワーク(プロバイダ)のSMTPサーバを使わずに標的のSMTPサーバのTCP/25番ポートに接続 このときSMTPでは認証機能がないため誰でも送信できてしまう プロバイダの管理外のSMTPサーバに対して接続しようとする(TCP/25)通信を遮断することで防ぐ プロバイダ管理内のSMTPサーバの25番ポートには接続できると思います プロバイダ管理内で有れば認証しなくても誰が送信しているかわかるので SMTP AUTH メールの送信に使うポートをTCP/587に変更してSMTP AUTHによるユーザ認証を行うことでスパムメールを防ぐ TCP/587をサブミッションポートと呼ぶ DNSサーバーについて DNS(Domain Name System)はドメイン名とIPアドレスを紐づけることができる仕組み あるサイトに接続する際にドメイン名から紐づいたIPアドレスを特定し，該当IPアドレスを持つホストと通信する． DNSに記録されるレコードにはいくつかの種類がある Aレコード そのドメイン名に紐づいたIPv4アドレスを記録 AAAAレコード そのドメイン名に紐づいたIPv6アドレスを記録 NSレコード そのドメインの権威DNSサーバのホスト名 権威DNSサーバ：ドメインを管理しているDNSサーバのこと MXレコード メールサーバのホスト名 TXTレコード その他のメモやSPFやDKIMの情報など 実際にあるメールアドレスに対してメールを送る際はDNSを使ってそのドメイン名とIPアドレスを紐づけ，そのIPアドレス(メールサーバなど)に対して問い合わせる メールにおける日本語の扱い方について メールではASCIIコードという文字コードに基づいて文字が表現されている ASCIIコードは文字を7bitで表現しアルファベットの小文字・大文字や制御文字などを表現する 日本語などを扱うためにはShift JISやEUC-JPなどが使われている これらの文字は2byte文字であるがASCIIコードは7bitであるため表現できない 日本語独自の文字コードとしてISO-2022-JPが定められた 制御文字を用いて全角，半角の切り替わりやアルファベットと日本語の切り替わりなどを判断 本文だけでなくメールのタイトルなどにも日本語が使えるように 「=?文字コード?符号方式?符号化後の文字列?=」と表現することでどの文字コードで符号化されているかがわかるように 「=?ISO-2022-JP?B?xxxxxx?=」はISO-2020-JPという文字コードの文字列をBase64で符号化した結果がxxxxxxということ 送信ドメイン認証 送信元を偽装したメールを送信できる理由 自分のアドレス以外を指定しても送信できてします OP25BやSMTP AUTHはアカウントの認証をしているだけで，メールアドレス自体の認証はしていない 差出人に設定されたアドレスが正規のメールサーバを経由して送信されたものかを確認する必要がある SPF(Sender Policy Framework) DKIM(Domain Keys Identified Mail) DMARC(Domain-based Message Authentication Reporting and Conformance) SPF SPF(Sender Policy Framework)とはエンベロープFromドメインと送信元メールサーバのIPアドレスが一致しているかどうかを受信側で確認する技術です． ドメインとIPアドレスの関連を調べるのでDNSサーバを使用 DNSレコードに対して「SPFレコード」と呼ばれる，そのドメインから送信されるメールに関する正当なメールサーバの情報をまとめたレコードを記述しておく ＊メールの配送経路にリレーメールサーバがある場合は送信元のIPアドレスとエンベロープFromのドメインが使用するメールサーバのIPが一致しない SPFだけではエンベロープFromのドメインと送信元のIPが一致しているかを見ているだけ 攻撃者が用意したドメインに対するDNSサーバにSPFレコードを設定していた場合，IPアドレス自体は一致するのでSPFは成功してしまう DKIM DKIM(Domain Keys Identified Mail) 公開鍵暗号方式を用いた送信元ドメイン認証の仕組み 本文などをもとに作成したデジタル署名をメールに付加して受信側のメールサーバでデジタル署名を検証する技術 処理の流れ 送信側は前もって，公開鍵と秘密鍵を用意し，公開鍵をDNSサーバに登録する(DKIMレコードという形で) メールの送信時にメールの本文・ヘッダーなどからハッシュ値を計算して秘密鍵で暗号化したものを署名とする 受信側は付加されたデジタル署名をDNSに登録された公開鍵を用いて復号し，ハッシュ値を得る 受信したメールからハッシュ値を取得し，復号して得られたハッシュ値を比較する これらが一致した場合，正規のユーザから送信されたことがわかる DKIMでは送信元を認証するだけでなく，メールが改ざんされていないことの確認もできる メールの内容が変わるとハッシュ値が異なるものになるため SPFと同様に，攻撃者が用意したドメインに対するDNSサーバにDKIMレコードを設定していた場合，ハッシュ値自体は一致してしまうので認証は成功してしまう． 送信者側の秘密鍵が漏洩することも考えられるため定期的に鍵を変更・DNSサーバへの再登録が必要 DMARC DMARC(Domain-based Message Authentication Reporting and Conformance) SPFやDKIMの認証結果をどのように処理するかを指定することができる 受信側のメールサーバはエンベロープFROMに記述されたドメインのDNSサーバよりDMARCレコードを取得する SPFやDKIMの認証結果について確認する 認証が成功していた場合はそのメールを受信する 失敗した場合の対応について記述することができる そのまま許可する・隔離する・拒否するのいづれか 認証の結果についてのレポートを受信メールサーバのドメインの持ち主へ通知することもできる DNSSEC DNSキャッシュポイズニングを防ぐための技術 DNSキャッシュポイズニングとは フルサービスリゾルバー(キャッシュDNSサーバ)が権威DNSサーバに問い合わせを行う際に，攻撃者が用意した偽のDNSサーバが正規のDNSサーバよりも先に応答を返すことで，誤った内容をキャッシュさせ偽のサイトに誘導する攻撃 DNSSECとは 権威DNSサーバからの応答が改ざんされておらず，かつ正しい相手からの通信であることを保証する技術 問い合わせを受けた権威DNSサーバは応答時にDNSデータだけでなく，デジタル署名を付加して応答する この署名を検証することで応答してきたDNSサーバが正規のDNSサーバであることを確認できる 検証に使う公開鍵の管理方法について DNSは階層構造をとっている 自身の公開鍵をハッシュ化して親DNSサーバに送付する 親DNSサーバは送られてきたハッシュ値を自身の秘密鍵で暗号化し，さらに上の親DNSサーバに送付する 参考 実務で使えるメール技術の教科書 https://www.shoeisha.co.jp/book/detail/9784798183930 構造計画研究所[日本語メールの仕組み] https://sendgrid.kke.co.jp/blog/?p=10958 https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf https://www.tohoho-web.com/ex/draft/smtp-auth.htm 最後に 今回はメール周りについて勉強したことをまとめてみました． 先日VPSも契約したので時間があればメールサーバとか立ててみたいですね． メールヘッダーのこととかあんまりちゃんと考えたことなかったのでとても興味深かったです．">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/about_mail_tech/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+    crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+</head>
+<body data-theme = "light" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/book/">
+                        Book
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">メール周りの技術について</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-07-08T11:17:09&#43;09:00" itemprop="datePublished"> Jul 8, 2024
+                    </time>
+                </div>
+                
+            </header>
+            
+    
+        
+            
+        
+    
+    <details class="toc" open>
+        <summary><b></b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#smtppopimapについて">SMTP,POP,IMAPについて</a></li>
+    <li><a href="#メールの構造について">メールの構造について</a></li>
+    <li><a href="#メールヘッダーについて">メールヘッダーについて</a></li>
+    <li><a href="#メールを送信する際の認証">メールを送信する際の認証</a>
+      <ul>
+        <li><a href="#op25b">OP25B</a></li>
+      </ul>
+    </li>
+    <li><a href="#dnsサーバーについて">DNSサーバーについて</a></li>
+    <li><a href="#メールにおける日本語の扱い方について">メールにおける日本語の扱い方について</a></li>
+    <li><a href="#送信ドメイン認証">送信ドメイン認証</a>
+      <ul>
+        <li><a href="#spf">SPF</a></li>
+        <li><a href="#dkim">DKIM</a></li>
+        <li><a href="#dmarc">DMARC</a></li>
+        <li><a href="#dnssec">DNSSEC</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="smtppopimapについて">SMTP,POP,IMAPについて</h2>
+<ul>
+<li>SMTPとは
+<ul>
+<li>SMTP(Simple Mail Transfer Protocol)の略で名前の通り<span style="color: orange">メールを転送・送信</span>するためのプロトコルです．</li>
+<li>SMTPサーバに接続することでメールの転送・送信が可能になります．
+<ul>
+<li>その際にクライアントからSMTPサーバへの接続は25番ポートに対してTelnetを使って行われます．
+<ul>
+<li>後程紹介する<code>OP25B</code>により25番ポートは使われない場合が多いです．</li>
+</ul>
+</li>
+<li>イメージとしてはTCP/IPの3way hand shakeみたいな感じで互いにやり取りしてる感じです．</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>POPとは
+<ul>
+<li>POP(Post Office Protocol)とはメールの受信に用いられるプロトコルでありSMTPは送信を担っているのに対してこちらは受信を担っています．</li>
+<li>受信したメールを<span style="color: orange">ローカルにダウンロードしたのちにメールサーバからは該当のメールが削除</span>されるため一度ダウンロードするとその端末以外からは見れなくなります．</li>
+</ul>
+</li>
+<li>IMAPとは
+<ul>
+<li>IMAP(Internet Message Access Protocol)はPOPと同様にメールを受信するためのプロトコルです．</li>
+<li>POPとは異なりメールサーバー上でメールの管理を行っているため複数の端末で同一のメールを閲覧することができ，<span style="color: orange">ある端末で閲覧してもサーバー上から削除はされません．</span></li>
+<li>あくまでもローカルにコピーをとっているようなイメージです．</li>
+</ul>
+</li>
+<li>なのでPOPとIMAPはメールを管理する場所が違うという感じです．
+<ul>
+<li>POP：ローカルの端末</li>
+<li>IMAP：メールサーバ上</li>
+</ul>
+</li>
+</ul>
+<h2 id="メールの構造について">メールの構造について</h2>
+<ul>
+<li>SMTPでメールを送信する際，メール本文の宛先をもとに送信するわけではない
+<ul>
+<li>封筒の役割を果たす<span style="color: orange">エンベロープ</span>を参照している．</li>
+<li>エンベロープに書かれている送信者をエンベロープFrom，宛先をエンベロープToという．</li>
+<li>エンベロープFromと本文のFromや，エンベロープToと本文のToが異なる場合がある．
+<ul>
+<li>企業のメールマガジンの配信などで，送信に使うメールサーバに外部のメールサーバを使いたいとき</li>
+<li>エンベロープFromは外部のメールサーバ，本文のFromは企業名などにしておくなど</li>
+<li>エンベロープFromを偽装することでエラーメールを用いて特定のメールアドレスに大量のメールを送り付ける方法がある</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="メールヘッダーについて">メールヘッダーについて</h2>
+<ul>
+<li>メールヘッダーには送信先[To]や送信元[From]，件名[Subject]のほかに送信日時を表す[Date]やメールを一意に識別するための[Message-ID]などの様々な情報が付加されています．</li>
+<li>また，MIME(Multipurpose Internet Mail Extension)と呼ばれるようなメールに文字列以外の画像やPDFなどのファイルを添付するための拡張機能などでは，添付ファイルごとにヘッダーと本文を繰り返すような構造をとっています．
+<ul>
+<li>ヘッダーには[MIME-Version:1.0]などが付加されます．</li>
+</ul>
+</li>
+<li>Content-type
+<ul>
+<li>メール本文の形式を指定するもので，メールにテキストや画像，音声，動画などを添付する際にその種類が指定されています．</li>
+<li>テキスト形式の場合
+<ul>
+<li><code>Content-Type: text/plain;charset=UTF-8</code></li>
+</ul>
+</li>
+<li>画像の場合
+<ul>
+<li><code>Content-Type: image/png</code></li>
+</ul>
+</li>
+<li>動画の場合
+<ul>
+<li><code>Content-Type: video/mp4</code></li>
+</ul>
+</li>
+<li>PDFの場合
+<ul>
+<li><code>Content-Type: application/pdf</code></li>
+</ul>
+</li>
+<li>メールを複数の構造に分割して作成する場合(テキストと画像などの複数の要素を含んでいる場合)
+<ul>
+<li><code>Content-Type: multipart/mixed</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Return-Path
+<ul>
+<li>宛先が存在しなかったなどの理由でメールサーバ間でメールが送信できなかったときにエラーメールを返す先を表す．</li>
+</ul>
+</li>
+<li>Received
+<ul>
+<li>メールを中継するサーバが別のサーバに向けて転送処理を行うたびにヘッダーに付加される情報になります．</li>
+<li>これによりメールが送信される際に通過したサーバの経路を特定することができます．</li>
+</ul>
+</li>
+</ul>
+<h2 id="メールを送信する際の認証">メールを送信する際の認証</h2>
+<ul>
+<li>メールの送信の際の認証が必要な理由
+<ul>
+<li>POPやIMAPでは受診の際にユーザID・パスワードなどでログインを行っていた</li>
+<li>SMTPでは送信の際に認証などを行わずに誰でも送信・転送可能</li>
+<li>スパムメールであふれてしまう可能性がある</li>
+</ul>
+</li>
+<li>SMTP AUTH(AMTP Authentication)
+<ul>
+<li>SMTPによってメールを送信する際にIDとパスワードを用いてそのユーザを認証する</li>
+<li><span style="color: orange">SASL</span>(Simple Authentication and Security Layer)と呼ばれるフレームワークにより様々な方法による認証が可能に</li>
+<li>認証方式
+<ul>
+<li>PLAIN
+<ul>
+<li>IDとパスワードを合わせて符号化してSMTPサーバーに送信する</li>
+<li><img alt="smtp-auth" src="/images/20240712/smtp-auth.png"></li>
+</ul>
+</li>
+<li>LOGIN
+<ul>
+<li>最初にIDを送信して何度かSMTPサーバーとやり取りする中でパスワードを送信</li>
+<li>PLAINやLOGINでは認証情報は暗号化はされていないため，盗み見られるの可能性がある</li>
+</ul>
+</li>
+<li>CRAM-MD5
+<ul>
+<li>Challenge Response Authentication Mechanismの略</li>
+<li>処理の流れ
+<ul>
+<li>サーバ側に認証要求を送る</li>
+<li>SMTPサーバ側(認証する側)からクライアント側に「チャレンジ」と呼ばれる乱数文字列を送信</li>
+<li>クライアント側は送られてきた乱数文字列と自身のユーザ名・パスワードを用いてハッシュ化する</li>
+<li>この時にハッシュ関数としてMD5を使用
+<ul>
+<li>クライアントから届いたハッシュ化された文字列(パスワード+乱数文字列)</li>
+<li>サーバ側で保存されているパスワードと乱数文字列をハッシュ化したもの</li>
+<li>この2つを比較することで認証する</li>
+</ul>
+</li>
+<li>乱数文字列は毎回変わり，ハッシュ化されるため盗み見られるリスクがない</li>
+<li><img alt="CRAM" src="/images/20240712/challenge_response.png"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SCRAM-SHA-1・SCRAM-SHA-256
+<ul>
+<li>Solted Challenge Response Authentication Mechanismの略</li>
+<li>サーバー側でパスワード自体を保存せずに認証が可能</li>
+<li>「ソルト」と呼ばれる，ユーザごとに異なる乱数文字列のこと
+<ul>
+<li>ユーザごとに異なる文字列なので，異なるユーザが同じパスワードを使用していた場合でも生成されるハッシュ値は異なるものになる</li>
+</ul>
+</li>
+<li>ここはもう少し勉強が必要そうです.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="op25b">OP25B</h3>
+<ul>
+<li>OP25B(Outbound Port 25 Blocking)の略
+<ul>
+<li>自分のネットワークから外部ネットワークへのTCP/25番ポートの通信を遮断すること</li>
+</ul>
+</li>
+<li>スパムメールなどは自分のネットワーク(プロバイダ)のSMTPサーバを使わずに標的のSMTPサーバのTCP/25番ポートに接続
+<ul>
+<li>このときSMTPでは認証機能がないため誰でも送信できてしまう</li>
+<li>プロバイダの管理外のSMTPサーバに対して接続しようとする(TCP/25)通信を遮断することで防ぐ
+<ul>
+<li>プロバイダ管理内のSMTPサーバの25番ポートには接続できると思います</li>
+<li>プロバイダ管理内で有れば認証しなくても誰が送信しているかわかるので</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SMTP AUTH
+<ul>
+<li>メールの送信に使うポートをTCP/587に変更してSMTP AUTHによるユーザ認証を行うことでスパムメールを防ぐ</li>
+<li>TCP/587をサブミッションポートと呼ぶ</li>
+</ul>
+</li>
+</ul>
+<h2 id="dnsサーバーについて">DNSサーバーについて</h2>
+<ul>
+<li>DNS(Domain Name System)はドメイン名とIPアドレスを紐づけることができる仕組み
+<ul>
+<li>あるサイトに接続する際にドメイン名から紐づいたIPアドレスを特定し，該当IPアドレスを持つホストと通信する．</li>
+</ul>
+</li>
+<li>DNSに記録されるレコードにはいくつかの種類がある
+<ul>
+<li>Aレコード
+<ul>
+<li>そのドメイン名に紐づいたIPv4アドレスを記録</li>
+</ul>
+</li>
+<li>AAAAレコード
+<ul>
+<li>そのドメイン名に紐づいたIPv6アドレスを記録</li>
+</ul>
+</li>
+<li>NSレコード
+<ul>
+<li>そのドメインの権威DNSサーバのホスト名</li>
+<li>権威DNSサーバ：ドメインを管理しているDNSサーバのこと</li>
+</ul>
+</li>
+<li>MXレコード
+<ul>
+<li>メールサーバのホスト名</li>
+</ul>
+</li>
+<li>TXTレコード
+<ul>
+<li>その他のメモやSPFやDKIMの情報など</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>実際にあるメールアドレスに対してメールを送る際はDNSを使ってそのドメイン名とIPアドレスを紐づけ，そのIPアドレス(メールサーバなど)に対して問い合わせる</li>
+</ul>
+<h2 id="メールにおける日本語の扱い方について">メールにおける日本語の扱い方について</h2>
+<ul>
+<li>メールではASCIIコードという文字コードに基づいて文字が表現されている
+<ul>
+<li>ASCIIコードは文字を7bitで表現しアルファベットの小文字・大文字や制御文字などを表現する</li>
+</ul>
+</li>
+<li>日本語などを扱うためにはShift JISやEUC-JPなどが使われている
+<ul>
+<li>これらの文字は2byte文字であるがASCIIコードは7bitであるため表現できない</li>
+<li>日本語独自の文字コードとしてISO-2022-JPが定められた</li>
+<li>制御文字を用いて全角，半角の切り替わりやアルファベットと日本語の切り替わりなどを判断</li>
+</ul>
+</li>
+<li>本文だけでなくメールのタイトルなどにも日本語が使えるように
+<ul>
+<li>「=?文字コード?符号方式?符号化後の文字列?=」と表現することでどの文字コードで符号化されているかがわかるように</li>
+<li>「=?ISO-2022-JP?B?xxxxxx?=」はISO-2020-JPという文字コードの文字列をBase64で符号化した結果がxxxxxxということ</li>
+</ul>
+</li>
+</ul>
+<h2 id="送信ドメイン認証">送信ドメイン認証</h2>
+<ul>
+<li>送信元を偽装したメールを送信できる理由
+<ul>
+<li>自分のアドレス以外を指定しても送信できてします</li>
+<li><span style="color: orange">OP25BやSMTP AUTHはアカウントの認証をしているだけで，メールアドレス自体の認証はしていない</span></li>
+</ul>
+</li>
+<li>差出人に設定されたアドレスが正規のメールサーバを経由して送信されたものかを確認する必要がある
+<ul>
+<li>SPF(Sender Policy Framework)</li>
+<li>DKIM(Domain Keys Identified Mail)</li>
+<li>DMARC(Domain-based Message Authentication Reporting and Conformance)</li>
+</ul>
+</li>
+</ul>
+<h3 id="spf">SPF</h3>
+<ul>
+<li>SPF(Sender Policy Framework)とはエンベロープFromドメインと送信元メールサーバのIPアドレスが一致しているかどうかを受信側で確認する技術です．
+<ul>
+<li>ドメインとIPアドレスの関連を調べるのでDNSサーバを使用</li>
+<li>DNSレコードに対して「SPFレコード」と呼ばれる，そのドメインから送信されるメールに関する正当なメールサーバの情報をまとめたレコードを記述しておく</li>
+<li>＊メールの配送経路にリレーメールサーバがある場合は送信元のIPアドレスとエンベロープFromのドメインが使用するメールサーバのIPが一致しない
+<img alt="SPF" src="/images/20240712/SPF.png"></li>
+</ul>
+</li>
+<li>SPFだけではエンベロープFromのドメインと送信元のIPが一致しているかを見ているだけ
+<ul>
+<li>攻撃者が用意したドメインに対するDNSサーバにSPFレコードを設定していた場合，IPアドレス自体は一致するのでSPFは成功してしまう</li>
+</ul>
+</li>
+</ul>
+<h3 id="dkim">DKIM</h3>
+<ul>
+<li>DKIM(Domain Keys Identified Mail)
+<ul>
+<li>公開鍵暗号方式を用いた送信元ドメイン認証の仕組み</li>
+<li>本文などをもとに作成したデジタル署名をメールに付加して受信側のメールサーバでデジタル署名を検証する技術</li>
+<li>処理の流れ
+<ul>
+<li>送信側は前もって，公開鍵と秘密鍵を用意し，公開鍵をDNSサーバに登録する(DKIMレコードという形で)</li>
+<li>メールの送信時にメールの本文・ヘッダーなどからハッシュ値を計算して秘密鍵で暗号化したものを署名とする</li>
+<li>受信側は付加されたデジタル署名をDNSに登録された公開鍵を用いて復号し，ハッシュ値を得る</li>
+<li>受信したメールからハッシュ値を取得し，復号して得られたハッシュ値を比較する</li>
+<li>これらが一致した場合，正規のユーザから送信されたことがわかる</li>
+</ul>
+</li>
+<li>DKIMでは送信元を認証するだけでなく，メールが改ざんされていないことの確認もできる
+<ul>
+<li>メールの内容が変わるとハッシュ値が異なるものになるため</li>
+</ul>
+</li>
+<li>SPFと同様に，攻撃者が用意したドメインに対するDNSサーバにDKIMレコードを設定していた場合，ハッシュ値自体は一致してしまうので認証は成功してしまう．</li>
+<li>送信者側の秘密鍵が漏洩することも考えられるため定期的に鍵を変更・DNSサーバへの再登録が必要</li>
+</ul>
+</li>
+</ul>
+<h3 id="dmarc">DMARC</h3>
+<ul>
+<li>DMARC(Domain-based Message Authentication Reporting and Conformance)
+<ul>
+<li>SPFやDKIMの認証結果をどのように処理するかを指定することができる
+<ul>
+<li>受信側のメールサーバはエンベロープFROMに記述されたドメインのDNSサーバよりDMARCレコードを取得する</li>
+<li>SPFやDKIMの認証結果について確認する</li>
+<li>認証が成功していた場合はそのメールを受信する</li>
+<li>失敗した場合の対応について記述することができる
+<ul>
+<li>そのまま許可する・隔離する・拒否するのいづれか</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>認証の結果についてのレポートを受信メールサーバのドメインの持ち主へ通知することもできる</li>
+</ul>
+</li>
+</ul>
+<h3 id="dnssec">DNSSEC</h3>
+<ul>
+<li>DNSキャッシュポイズニングを防ぐための技術
+<ul>
+<li>DNSキャッシュポイズニングとは
+<ul>
+<li>フルサービスリゾルバー(キャッシュDNSサーバ)が権威DNSサーバに問い合わせを行う際に，攻撃者が用意した偽のDNSサーバが正規のDNSサーバよりも先に応答を返すことで，誤った内容をキャッシュさせ偽のサイトに誘導する攻撃</li>
+</ul>
+</li>
+<li>DNSSECとは
+<ul>
+<li>権威DNSサーバからの応答が改ざんされておらず，かつ正しい相手からの通信であることを保証する技術</li>
+<li>問い合わせを受けた権威DNSサーバは応答時にDNSデータだけでなく，デジタル署名を付加して応答する</li>
+<li>この署名を検証することで応答してきたDNSサーバが正規のDNSサーバであることを確認できる</li>
+</ul>
+</li>
+<li>検証に使う公開鍵の管理方法について
+<ul>
+<li>DNSは階層構造をとっている</li>
+<li>自身の公開鍵をハッシュ化して親DNSサーバに送付する</li>
+<li>親DNSサーバは送られてきたハッシュ値を自身の秘密鍵で暗号化し，さらに上の親DNSサーバに送付する</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul>
+<li>実務で使えるメール技術の教科書
+<ul>
+<li><a href="https://www.shoeisha.co.jp/book/detail/9784798183930">https://www.shoeisha.co.jp/book/detail/9784798183930</a></li>
+</ul>
+</li>
+<li>構造計画研究所[日本語メールの仕組み]
+<ul>
+<li><a href="https://sendgrid.kke.co.jp/blog/?p=10958">https://sendgrid.kke.co.jp/blog/?p=10958</a></li>
+</ul>
+</li>
+<li><a href="https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html">https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html</a></li>
+<li><a href="https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf">https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf</a></li>
+<li><a href="https://www.tohoho-web.com/ex/draft/smtp-auth.htm">https://www.tohoho-web.com/ex/draft/smtp-auth.htm</a></li>
+</ul>
+<h1 id="最後に">最後に</h1>
+<p>今回はメール周りについて勉強したことをまとめてみました．
+先日VPSも契約したので時間があればメールサーバとか立ててみたいですね．
+メールヘッダーのこととかあんまりちゃんと考えたことなかったのでとても興味深かったです．</p>
+
+            </div>
+            <div style="text-align: center;background-color: #848dee67;color: #FFFFFF;">
+                <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fabout_mail_tech%2f&text=%e3%83%a1%e3%83%bc%e3%83%ab%e5%91%a8%e3%82%8a%e3%81%ae%e6%8a%80%e8%a1%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6"
+                    target="_blank">X(Twitter)への共有はこちらから</a>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/yuudee" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://x.com/yuu__dee" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 yuudee .
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

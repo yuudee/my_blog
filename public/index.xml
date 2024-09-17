@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yuudee&#39;s blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on yuudee&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>japanese</language>
+    <lastBuildDate>Sat, 14 Sep 2024 18:53:37 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己紹介</title>
+      <link>http://localhost:1313/pages/about/</link>
+      <pubDate>Sat, 14 Sep 2024 18:53:37 +0900</pubDate>
+      
+      <guid>http://localhost:1313/pages/about/</guid>
+      
+      <description>&lt;h1 id=&#34;自己紹介&#34;&gt;自己紹介&lt;/h1&gt;
+&lt;p&gt;地方国立大のM2です．
+普段はAIやネットワーク・セキュリティ関連の勉強してます．
+技術全般に興味があります．
+このブログはあくまでも自分の備忘録的なものです．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各種SNSリンク
+&lt;ul&gt;
+&lt;li&gt;X(旧Twitter)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://x.com/yuu__dee&#34;&gt;https://x.com/yuu__dee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Github
+&lt;ul&gt;
+&lt;li&gt;ほとんど更新してできていないのでなるべく更新したいと思います&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yuudee&#34;&gt;https://github.com/yuudee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;保有資格&#34;&gt;保有資格&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;基本情報技術者(2020年春取得)&lt;/li&gt;
+&lt;li&gt;応用情報技術者(2024年春取得)&lt;/li&gt;
+&lt;li&gt;情報処理安全確保支援士(勉強中・2024年秋での合格を目指してます)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;好きなこと経験&#34;&gt;好きなこと・経験&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CTF
+&lt;ul&gt;
+&lt;li&gt;まだまだ初心者ですが…&lt;/li&gt;
+&lt;li&gt;個人的に好きな分野はforensicsです(得意というわけではありません).&lt;/li&gt;
+&lt;li&gt;学生の間にpicoCTFなどの常設CTFでしっかり基本からやりたいなとか思ってます．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ネットワーク・セキュリティ周りの勉強
+&lt;ul&gt;
+&lt;li&gt;THMとかHTBとか本格的にやりたいと思ってるところです.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Xで面白そうな記事・ブログ探し&lt;br&gt;
+などなど…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;今後勉強したい分野キーワード&#34;&gt;今後勉強したい分野・キーワード&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;docker・k8s&lt;/li&gt;
+&lt;li&gt;ゼロトラスト&lt;/li&gt;
+&lt;li&gt;暗号周り&lt;/li&gt;
+&lt;li&gt;連合学習&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参加したイベント大会など&#34;&gt;参加したイベント・大会など&lt;/h1&gt;
+&lt;h2 id=&#34;ctf関係&#34;&gt;CTF関係&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;picoCTF 2024&lt;/li&gt;
+&lt;li&gt;DIVER OSINT CTF 2024
+&lt;ul&gt;
+&lt;li&gt;104位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SECCON BEGINNERS CTF 2024
+&lt;ul&gt;
+&lt;li&gt;513位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WaniCTF 2024
+&lt;ul&gt;
+&lt;li&gt;420位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;セキュリティ関係&#34;&gt;セキュリティ関係&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;P3NFEST 2024 SUMMER(online参加)&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>読んだ本リスト・読みたい本リスト</title>
+      <link>http://localhost:1313/pages/book/</link>
+      <pubDate>Sat, 14 Sep 2024 18:53:37 +0900</pubDate>
+      
+      <guid>http://localhost:1313/pages/book/</guid>
+      
+      <description>&lt;h2 id=&#34;読んだ本リスト&#34;&gt;読んだ本リスト&lt;/h2&gt;
+&lt;h3 id=&#34;技術書&#34;&gt;技術書&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;情報セキュリティの敗北史
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hakuyo-sha.co.jp/science/security/&#34;&gt;https://www.hakuyo-sha.co.jp/science/security/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;今の僕には少し難しすぎたかもしれないです…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;マスタリングTCP/IP 入門編
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ohmsha.co.jp/book/9784274224478/&#34;&gt;https://www.ohmsha.co.jp/book/9784274224478/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ネットワークに興味がある人にはぜひ読んでもらいたい本です.&lt;/li&gt;
+&lt;li&gt;私もこれ読んでネットワークへの理解がかなり深まった印象です．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技術書の読書術
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798171548&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798171548&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;「技術書の読書術」といいつつ技術書以外にも使えそうなテクニックが書かれています．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;世界一流エンジニアの思考法
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://books.bunshun.jp/ud/book/num/9784163917689&#34;&gt;https://books.bunshun.jp/ud/book/num/9784163917689&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;技術面だけでなくメンタル面や日ごろの生活の観点からも書かれていて面白かったです．&lt;/li&gt;
+&lt;li&gt;時間があるときにもう一度読みたいです．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;「メール技術」の教科書
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183930&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183930&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人的にメール周りに触れる機会があり，勉強してみたくなって読んでみました．&lt;/li&gt;
+&lt;li&gt;メール技術に特化した本ってあまりないのでとても勉強になりました．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ビジネス自己啓発&#34;&gt;ビジネス・自己啓発&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;「もう怒らない」ための本
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ascom-inc.jp/books/detail/978-4-7762-0899-0.html&#34;&gt;https://www.ascom-inc.jp/books/detail/978-4-7762-0899-0.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;僕自身少しイライラしやすいところがあり，もう少し気楽に過ごしていきたいなと思い本屋でなんとなく手に取った本です．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;その他&#34;&gt;その他&lt;/h3&gt;
+&lt;h2 id=&#34;読みたい本リスト&#34;&gt;読みたい本リスト&lt;/h2&gt;
+&lt;h3 id=&#34;技術書-1&#34;&gt;技術書&lt;/h3&gt;
+&lt;h3 id=&#34;ビジネス自己啓発-1&#34;&gt;ビジネス・自己啓発&lt;/h3&gt;
+&lt;h3 id=&#34;その他-1&#34;&gt;その他&lt;/h3&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>メール周りの技術について</title>
+      <link>http://localhost:1313/posts/about_mail_tech/</link>
+      <pubDate>Mon, 08 Jul 2024 11:17:09 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/about_mail_tech/</guid>
+      
+      <description>&lt;h2 id=&#34;smtppopimapについて&#34;&gt;SMTP,POP,IMAPについて&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SMTPとは
+&lt;ul&gt;
+&lt;li&gt;SMTP(Simple Mail Transfer Protocol)の略で名前の通り&lt;span style=&#34;color: orange&#34;&gt;メールを転送・送信&lt;/span&gt;するためのプロトコルです．&lt;/li&gt;
+&lt;li&gt;SMTPサーバに接続することでメールの転送・送信が可能になります．
+&lt;ul&gt;
+&lt;li&gt;その際にクライアントからSMTPサーバへの接続は25番ポートに対してTelnetを使って行われます．
+&lt;ul&gt;
+&lt;li&gt;後程紹介する&lt;code&gt;OP25B&lt;/code&gt;により25番ポートは使われない場合が多いです．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;イメージとしてはTCP/IPの3way hand shakeみたいな感じで互いにやり取りしてる感じです．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;POPとは
+&lt;ul&gt;
+&lt;li&gt;POP(Post Office Protocol)とはメールの受信に用いられるプロトコルでありSMTPは送信を担っているのに対してこちらは受信を担っています．&lt;/li&gt;
+&lt;li&gt;受信したメールを&lt;span style=&#34;color: orange&#34;&gt;ローカルにダウンロードしたのちにメールサーバからは該当のメールが削除&lt;/span&gt;されるため一度ダウンロードするとその端末以外からは見れなくなります．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IMAPとは
+&lt;ul&gt;
+&lt;li&gt;IMAP(Internet Message Access Protocol)はPOPと同様にメールを受信するためのプロトコルです．&lt;/li&gt;
+&lt;li&gt;POPとは異なりメールサーバー上でメールの管理を行っているため複数の端末で同一のメールを閲覧することができ，&lt;span style=&#34;color: orange&#34;&gt;ある端末で閲覧してもサーバー上から削除はされません．&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;あくまでもローカルにコピーをとっているようなイメージです．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;なのでPOPとIMAPはメールを管理する場所が違うという感じです．
+&lt;ul&gt;
+&lt;li&gt;POP：ローカルの端末&lt;/li&gt;
+&lt;li&gt;IMAP：メールサーバ上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;メールの構造について&#34;&gt;メールの構造について&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SMTPでメールを送信する際，メール本文の宛先をもとに送信するわけではない
+&lt;ul&gt;
+&lt;li&gt;封筒の役割を果たす&lt;span style=&#34;color: orange&#34;&gt;エンベロープ&lt;/span&gt;を参照している．&lt;/li&gt;
+&lt;li&gt;エンベロープに書かれている送信者をエンベロープFrom，宛先をエンベロープToという．&lt;/li&gt;
+&lt;li&gt;エンベロープFromと本文のFromや，エンベロープToと本文のToが異なる場合がある．
+&lt;ul&gt;
+&lt;li&gt;企業のメールマガジンの配信などで，送信に使うメールサーバに外部のメールサーバを使いたいとき&lt;/li&gt;
+&lt;li&gt;エンベロープFromは外部のメールサーバ，本文のFromは企業名などにしておくなど&lt;/li&gt;
+&lt;li&gt;エンベロープFromを偽装することでエラーメールを用いて特定のメールアドレスに大量のメールを送り付ける方法がある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;メールヘッダーについて&#34;&gt;メールヘッダーについて&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;メールヘッダーには送信先[To]や送信元[From]，件名[Subject]のほかに送信日時を表す[Date]やメールを一意に識別するための[Message-ID]などの様々な情報が付加されています．&lt;/li&gt;
+&lt;li&gt;また，MIME(Multipurpose Internet Mail Extension)と呼ばれるようなメールに文字列以外の画像やPDFなどのファイルを添付するための拡張機能などでは，添付ファイルごとにヘッダーと本文を繰り返すような構造をとっています．
+&lt;ul&gt;
+&lt;li&gt;ヘッダーには[MIME-Version:1.0]などが付加されます．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-type
+&lt;ul&gt;
+&lt;li&gt;メール本文の形式を指定するもので，メールにテキストや画像，音声，動画などを添付する際にその種類が指定されています．&lt;/li&gt;
+&lt;li&gt;テキスト形式の場合
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Content-Type: text/plain;charset=UTF-8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;画像の場合
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Content-Type: image/png&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;動画の場合
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Content-Type: video/mp4&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PDFの場合
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Content-Type: application/pdf&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;メールを複数の構造に分割して作成する場合(テキストと画像などの複数の要素を含んでいる場合)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Content-Type: multipart/mixed&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Return-Path
+&lt;ul&gt;
+&lt;li&gt;宛先が存在しなかったなどの理由でメールサーバ間でメールが送信できなかったときにエラーメールを返す先を表す．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Received
+&lt;ul&gt;
+&lt;li&gt;メールを中継するサーバが別のサーバに向けて転送処理を行うたびにヘッダーに付加される情報になります．&lt;/li&gt;
+&lt;li&gt;これによりメールが送信される際に通過したサーバの経路を特定することができます．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;メールを送信する際の認証&#34;&gt;メールを送信する際の認証&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;メールの送信の際の認証が必要な理由
+&lt;ul&gt;
+&lt;li&gt;POPやIMAPでは受診の際にユーザID・パスワードなどでログインを行っていた&lt;/li&gt;
+&lt;li&gt;SMTPでは送信の際に認証などを行わずに誰でも送信・転送可能&lt;/li&gt;
+&lt;li&gt;スパムメールであふれてしまう可能性がある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SMTP AUTH(AMTP Authentication)
+&lt;ul&gt;
+&lt;li&gt;SMTPによってメールを送信する際にIDとパスワードを用いてそのユーザを認証する&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: orange&#34;&gt;SASL&lt;/span&gt;(Simple Authentication and Security Layer)と呼ばれるフレームワークにより様々な方法による認証が可能に&lt;/li&gt;
+&lt;li&gt;認証方式
+&lt;ul&gt;
+&lt;li&gt;PLAIN
+&lt;ul&gt;
+&lt;li&gt;IDとパスワードを合わせて符号化してSMTPサーバーに送信する&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&#34;smtp-auth&#34; src=&#34;http://localhost:1313/images/20240712/smtp-auth.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LOGIN
+&lt;ul&gt;
+&lt;li&gt;最初にIDを送信して何度かSMTPサーバーとやり取りする中でパスワードを送信&lt;/li&gt;
+&lt;li&gt;PLAINやLOGINでは認証情報は暗号化はされていないため，盗み見られるの可能性がある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CRAM-MD5
+&lt;ul&gt;
+&lt;li&gt;Challenge Response Authentication Mechanismの略&lt;/li&gt;
+&lt;li&gt;処理の流れ
+&lt;ul&gt;
+&lt;li&gt;サーバ側に認証要求を送る&lt;/li&gt;
+&lt;li&gt;SMTPサーバ側(認証する側)からクライアント側に「チャレンジ」と呼ばれる乱数文字列を送信&lt;/li&gt;
+&lt;li&gt;クライアント側は送られてきた乱数文字列と自身のユーザ名・パスワードを用いてハッシュ化する&lt;/li&gt;
+&lt;li&gt;この時にハッシュ関数としてMD5を使用
+&lt;ul&gt;
+&lt;li&gt;クライアントから届いたハッシュ化された文字列(パスワード+乱数文字列)&lt;/li&gt;
+&lt;li&gt;サーバ側で保存されているパスワードと乱数文字列をハッシュ化したもの&lt;/li&gt;
+&lt;li&gt;この2つを比較することで認証する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;乱数文字列は毎回変わり，ハッシュ化されるため盗み見られるリスクがない&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&#34;CRAM&#34; src=&#34;http://localhost:1313/images/20240712/challenge_response.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SCRAM-SHA-1・SCRAM-SHA-256
+&lt;ul&gt;
+&lt;li&gt;Solted Challenge Response Authentication Mechanismの略&lt;/li&gt;
+&lt;li&gt;サーバー側でパスワード自体を保存せずに認証が可能&lt;/li&gt;
+&lt;li&gt;「ソルト」と呼ばれる，ユーザごとに異なる乱数文字列のこと
+&lt;ul&gt;
+&lt;li&gt;ユーザごとに異なる文字列なので，異なるユーザが同じパスワードを使用していた場合でも生成されるハッシュ値は異なるものになる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ここはもう少し勉強が必要そうです.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;op25b&#34;&gt;OP25B&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OP25B(Outbound Port 25 Blocking)の略
+&lt;ul&gt;
+&lt;li&gt;自分のネットワークから外部ネットワークへのTCP/25番ポートの通信を遮断すること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;スパムメールなどは自分のネットワーク(プロバイダ)のSMTPサーバを使わずに標的のSMTPサーバのTCP/25番ポートに接続
+&lt;ul&gt;
+&lt;li&gt;このときSMTPでは認証機能がないため誰でも送信できてしまう&lt;/li&gt;
+&lt;li&gt;プロバイダの管理外のSMTPサーバに対して接続しようとする(TCP/25)通信を遮断することで防ぐ
+&lt;ul&gt;
+&lt;li&gt;プロバイダ管理内のSMTPサーバの25番ポートには接続できると思います&lt;/li&gt;
+&lt;li&gt;プロバイダ管理内で有れば認証しなくても誰が送信しているかわかるので&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SMTP AUTH
+&lt;ul&gt;
+&lt;li&gt;メールの送信に使うポートをTCP/587に変更してSMTP AUTHによるユーザ認証を行うことでスパムメールを防ぐ&lt;/li&gt;
+&lt;li&gt;TCP/587をサブミッションポートと呼ぶ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dnsサーバーについて&#34;&gt;DNSサーバーについて&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DNS(Domain Name System)はドメイン名とIPアドレスを紐づけることができる仕組み
+&lt;ul&gt;
+&lt;li&gt;あるサイトに接続する際にドメイン名から紐づいたIPアドレスを特定し，該当IPアドレスを持つホストと通信する．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DNSに記録されるレコードにはいくつかの種類がある
+&lt;ul&gt;
+&lt;li&gt;Aレコード
+&lt;ul&gt;
+&lt;li&gt;そのドメイン名に紐づいたIPv4アドレスを記録&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AAAAレコード
+&lt;ul&gt;
+&lt;li&gt;そのドメイン名に紐づいたIPv6アドレスを記録&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NSレコード
+&lt;ul&gt;
+&lt;li&gt;そのドメインの権威DNSサーバのホスト名&lt;/li&gt;
+&lt;li&gt;権威DNSサーバ：ドメインを管理しているDNSサーバのこと&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MXレコード
+&lt;ul&gt;
+&lt;li&gt;メールサーバのホスト名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TXTレコード
+&lt;ul&gt;
+&lt;li&gt;その他のメモやSPFやDKIMの情報など&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;実際にあるメールアドレスに対してメールを送る際はDNSを使ってそのドメイン名とIPアドレスを紐づけ，そのIPアドレス(メールサーバなど)に対して問い合わせる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;メールにおける日本語の扱い方について&#34;&gt;メールにおける日本語の扱い方について&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;メールではASCIIコードという文字コードに基づいて文字が表現されている
+&lt;ul&gt;
+&lt;li&gt;ASCIIコードは文字を7bitで表現しアルファベットの小文字・大文字や制御文字などを表現する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;日本語などを扱うためにはShift JISやEUC-JPなどが使われている
+&lt;ul&gt;
+&lt;li&gt;これらの文字は2byte文字であるがASCIIコードは7bitであるため表現できない&lt;/li&gt;
+&lt;li&gt;日本語独自の文字コードとしてISO-2022-JPが定められた&lt;/li&gt;
+&lt;li&gt;制御文字を用いて全角，半角の切り替わりやアルファベットと日本語の切り替わりなどを判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;本文だけでなくメールのタイトルなどにも日本語が使えるように
+&lt;ul&gt;
+&lt;li&gt;「=?文字コード?符号方式?符号化後の文字列?=」と表現することでどの文字コードで符号化されているかがわかるように&lt;/li&gt;
+&lt;li&gt;「=?ISO-2022-JP?B?xxxxxx?=」はISO-2020-JPという文字コードの文字列をBase64で符号化した結果がxxxxxxということ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;送信ドメイン認証&#34;&gt;送信ドメイン認証&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;送信元を偽装したメールを送信できる理由
+&lt;ul&gt;
+&lt;li&gt;自分のアドレス以外を指定しても送信できてします&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: orange&#34;&gt;OP25BやSMTP AUTHはアカウントの認証をしているだけで，メールアドレス自体の認証はしていない&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;差出人に設定されたアドレスが正規のメールサーバを経由して送信されたものかを確認する必要がある
+&lt;ul&gt;
+&lt;li&gt;SPF(Sender Policy Framework)&lt;/li&gt;
+&lt;li&gt;DKIM(Domain Keys Identified Mail)&lt;/li&gt;
+&lt;li&gt;DMARC(Domain-based Message Authentication Reporting and Conformance)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spf&#34;&gt;SPF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SPF(Sender Policy Framework)とはエンベロープFromドメインと送信元メールサーバのIPアドレスが一致しているかどうかを受信側で確認する技術です．
+&lt;ul&gt;
+&lt;li&gt;ドメインとIPアドレスの関連を調べるのでDNSサーバを使用&lt;/li&gt;
+&lt;li&gt;DNSレコードに対して「SPFレコード」と呼ばれる，そのドメインから送信されるメールに関する正当なメールサーバの情報をまとめたレコードを記述しておく&lt;/li&gt;
+&lt;li&gt;＊メールの配送経路にリレーメールサーバがある場合は送信元のIPアドレスとエンベロープFromのドメインが使用するメールサーバのIPが一致しない
+&lt;img alt=&#34;SPF&#34; src=&#34;http://localhost:1313/images/20240712/SPF.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SPFだけではエンベロープFromのドメインと送信元のIPが一致しているかを見ているだけ
+&lt;ul&gt;
+&lt;li&gt;攻撃者が用意したドメインに対するDNSサーバにSPFレコードを設定していた場合，IPアドレス自体は一致するのでSPFは成功してしまう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dkim&#34;&gt;DKIM&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DKIM(Domain Keys Identified Mail)
+&lt;ul&gt;
+&lt;li&gt;公開鍵暗号方式を用いた送信元ドメイン認証の仕組み&lt;/li&gt;
+&lt;li&gt;本文などをもとに作成したデジタル署名をメールに付加して受信側のメールサーバでデジタル署名を検証する技術&lt;/li&gt;
+&lt;li&gt;処理の流れ
+&lt;ul&gt;
+&lt;li&gt;送信側は前もって，公開鍵と秘密鍵を用意し，公開鍵をDNSサーバに登録する(DKIMレコードという形で)&lt;/li&gt;
+&lt;li&gt;メールの送信時にメールの本文・ヘッダーなどからハッシュ値を計算して秘密鍵で暗号化したものを署名とする&lt;/li&gt;
+&lt;li&gt;受信側は付加されたデジタル署名をDNSに登録された公開鍵を用いて復号し，ハッシュ値を得る&lt;/li&gt;
+&lt;li&gt;受信したメールからハッシュ値を取得し，復号して得られたハッシュ値を比較する&lt;/li&gt;
+&lt;li&gt;これらが一致した場合，正規のユーザから送信されたことがわかる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DKIMでは送信元を認証するだけでなく，メールが改ざんされていないことの確認もできる
+&lt;ul&gt;
+&lt;li&gt;メールの内容が変わるとハッシュ値が異なるものになるため&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SPFと同様に，攻撃者が用意したドメインに対するDNSサーバにDKIMレコードを設定していた場合，ハッシュ値自体は一致してしまうので認証は成功してしまう．&lt;/li&gt;
+&lt;li&gt;送信者側の秘密鍵が漏洩することも考えられるため定期的に鍵を変更・DNSサーバへの再登録が必要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dmarc&#34;&gt;DMARC&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DMARC(Domain-based Message Authentication Reporting and Conformance)
+&lt;ul&gt;
+&lt;li&gt;SPFやDKIMの認証結果をどのように処理するかを指定することができる
+&lt;ul&gt;
+&lt;li&gt;受信側のメールサーバはエンベロープFROMに記述されたドメインのDNSサーバよりDMARCレコードを取得する&lt;/li&gt;
+&lt;li&gt;SPFやDKIMの認証結果について確認する&lt;/li&gt;
+&lt;li&gt;認証が成功していた場合はそのメールを受信する&lt;/li&gt;
+&lt;li&gt;失敗した場合の対応について記述することができる
+&lt;ul&gt;
+&lt;li&gt;そのまま許可する・隔離する・拒否するのいづれか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;認証の結果についてのレポートを受信メールサーバのドメインの持ち主へ通知することもできる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dnssec&#34;&gt;DNSSEC&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DNSキャッシュポイズニングを防ぐための技術
+&lt;ul&gt;
+&lt;li&gt;DNSキャッシュポイズニングとは
+&lt;ul&gt;
+&lt;li&gt;フルサービスリゾルバー(キャッシュDNSサーバ)が権威DNSサーバに問い合わせを行う際に，攻撃者が用意した偽のDNSサーバが正規のDNSサーバよりも先に応答を返すことで，誤った内容をキャッシュさせ偽のサイトに誘導する攻撃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DNSSECとは
+&lt;ul&gt;
+&lt;li&gt;権威DNSサーバからの応答が改ざんされておらず，かつ正しい相手からの通信であることを保証する技術&lt;/li&gt;
+&lt;li&gt;問い合わせを受けた権威DNSサーバは応答時にDNSデータだけでなく，デジタル署名を付加して応答する&lt;/li&gt;
+&lt;li&gt;この署名を検証することで応答してきたDNSサーバが正規のDNSサーバであることを確認できる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;検証に使う公開鍵の管理方法について
+&lt;ul&gt;
+&lt;li&gt;DNSは階層構造をとっている&lt;/li&gt;
+&lt;li&gt;自身の公開鍵をハッシュ化して親DNSサーバに送付する&lt;/li&gt;
+&lt;li&gt;親DNSサーバは送られてきたハッシュ値を自身の秘密鍵で暗号化し，さらに上の親DNSサーバに送付する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;実務で使えるメール技術の教科書
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183930&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183930&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;構造計画研究所[日本語メールの仕組み]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sendgrid.kke.co.jp/blog/?p=10958&#34;&gt;https://sendgrid.kke.co.jp/blog/?p=10958&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html&#34;&gt;https://atmarkit.itmedia.co.jp/fnetwork/rensai/netpro03/mail-header-mime.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf&#34;&gt;https://www.kitasato-u.ac.jp/knc/mail/download/info_mail_header_v2.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tohoho-web.com/ex/draft/smtp-auth.htm&#34;&gt;https://www.tohoho-web.com/ex/draft/smtp-auth.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
+&lt;p&gt;今回はメール周りについて勉強したことをまとめてみました．
+先日VPSも契約したので時間があればメールサーバとか立ててみたいですね．
+メールヘッダーのこととかあんまりちゃんと考えたことなかったのでとても興味深かったです．&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>RSA暗号について</title>
+      <link>http://localhost:1313/posts/rsa_mechanism/</link>
+      <pubDate>Mon, 01 Jul 2024 16:41:26 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/rsa_mechanism/</guid>
+      
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;CTFをやる中で，少しは暗号に触れるようになってきたので，頻出のテーマであるRSA暗号について少し勉強してみました．&lt;/p&gt;
+&lt;h1 id=&#34;rsa暗号safeprime&#34;&gt;RSA暗号(safeprime)&lt;/h1&gt;
+&lt;p&gt;RSA暗号とは暗号化に使う鍵と復号に使う鍵が異なる公開鍵暗号方式の一つであり，1977年にRivest(リベスト)，Shamir(シャミア)，Adleman(エーデルマン)によって考案された，&lt;span style=&#34;color: orange; &#34;&gt;桁数がとても多い数字に対する素因数分解が困難&lt;/span&gt;であることを利用した暗号方式です．&lt;/p&gt;
+&lt;p&gt;これらの開発者の頭文字からRSA暗号と命名されました．&lt;/p&gt;
+&lt;h2 id=&#34;使われる式について&#34;&gt;使われる式について&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;最小公倍数
+&lt;ul&gt;
+&lt;li&gt;任意の整数$a,b$に対して最小の公倍数のこと．$LCM(a,b)$と表す．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最大公約数
+&lt;ul&gt;
+&lt;li&gt;任意の整数$a,b$に対して最大の公約数のこと．$GCD(a,b)$と表す．&lt;/li&gt;
+&lt;li&gt;$GCD(a,b)=1$の場合，整数$a,b$は互いに素である．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;モジュロ演算(合同式)
+&lt;ul&gt;
+&lt;li&gt;整数$a,b$に対して$a-b$が$n$の倍数であるとき，$a=b~mod~n$と表す．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;逆元(モジュラ逆数)
+&lt;ul&gt;
+&lt;li&gt;$ax~=1~mod~n$となるような逆数$x$を法$n$における$a$の逆元(モジュラ逆数)という&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;オイラー関数
+&lt;ul&gt;
+&lt;li&gt;$n$を超えない正の整数のうち$n$と互いに素である数の個数のこと．$\phi(n)$と書く．&lt;/li&gt;
+&lt;li&gt;例えば$\phi(6)~=[1,5]~=2$となる．&lt;/li&gt;
+&lt;li&gt;$n$が素数である場合，$\phi(n)~=~n-1$となる．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;フェルマーの小定理
+&lt;ul&gt;
+&lt;li&gt;素数$p$と互いに素な整数$a$において&lt;/li&gt;
+&lt;li&gt;$a^{p-1}=1~mod~p$が成り立つ．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;オイラーの定理
+&lt;ul&gt;
+&lt;li&gt;整数$m$と互いに素な整数$a$において&lt;/li&gt;
+&lt;li&gt;$a^{\phi(m)}=1~mod~m$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;鍵の生成&#34;&gt;鍵の生成&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;異なる大きな2つの素数$p,q$を生成する．&lt;/li&gt;
+&lt;li&gt;$n=pq$とする．&lt;/li&gt;
+&lt;li&gt;$\phi(n) = (p-1)(q-1)$と互いに素な自然数&lt;code&gt;e&lt;/code&gt;を生成する．
+&lt;ul&gt;
+&lt;li&gt;$GCD(\phi(n),e)=1$となるような自然数$e$&lt;/li&gt;
+&lt;li&gt;＊$n$は二つの素数$p,q$をかけたものであり，$p,q$は互いに素である．&lt;/li&gt;
+&lt;li&gt;＊その場合$\phi(pq)=\phi(p)~\phi(q)$が成り立つ．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$ed ≡ 1~mod~\phi(n)$となるような$d$を求める．
+&lt;ul&gt;
+&lt;li&gt;$ed$を$\phi(n)$で割ったときの余りが$1$になる．&lt;/li&gt;
+&lt;li&gt;この$d$を求めるには拡張ユークリッド互除法を用いて求めることができます．&lt;/li&gt;
+&lt;li&gt;ここで$GCD(\phi(n),e)=1$であるため，$\phi(n)x+ey=GCD(\phi(n),e)=1$を解き，$d$を求めます．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最終的に公開鍵は$(e,n)$，秘密鍵は$(d,n)$となります．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;暗号化&#34;&gt;暗号化&lt;/h2&gt;
+&lt;p&gt;送りたいメッセージを$M$，暗号文$C$とすると以下の式で暗号化をすることができる．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$C ≡ M^e~mod~n$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;復号化&#34;&gt;復号化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$C^d~mod~n ≡ x$&lt;/li&gt;
+&lt;li&gt;ここで$d$を求めるには$\phi$を求める必要がある，つまり，$(p-1)(q-1)$を知る必要がありますが，&lt;span style=&#34;color: orange; &#34;&gt;$\phi$は非常に大きな合成数であり，素因数分解を行うのが困難&lt;/span&gt;であることからRSA暗号の安全性が保障されています．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA暗号
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/momochanjazz/items/9314a8c965d6be6563a9&#34;&gt;https://qiita.com/momochanjazz/items/9314a8c965d6be6563a9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/drken/items/b97ff231e43bce50199a&#34;&gt;https://qiita.com/drken/items/b97ff231e43bce50199a&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;IPUSIRON著 「暗号技術のすべて」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>HugoとGithub pagesでブログサイトを構築する</title>
+      <link>http://localhost:1313/posts/howto_create_hugo_blog/</link>
+      <pubDate>Mon, 01 Jul 2024 14:03:33 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/howto_create_hugo_blog/</guid>
+      
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;今回は静的サイトジェネレータ&lt;code&gt;Hugo&lt;/code&gt;を用いてブログサイトを構築・Github pagesにデプロイする手順を紹介していきたいと思います．&lt;/p&gt;
+&lt;p&gt;以前までは全てのアウトプットをQiitaに投稿していましたが，Qiitaに投稿するまでもないようなアウトプットなどを残せる場所を残したいと思い，このサイトを作りました．&lt;/p&gt;
+&lt;h2 id=&#34;hugoのダウンロード&#34;&gt;Hugoのダウンロード&lt;/h2&gt;
+&lt;p&gt;まずはHugoのインストールを行います．&lt;/p&gt;
+&lt;p&gt;この&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;サイト&lt;/a&gt;よりzipファイルをダウンロードします．&lt;/p&gt;
+&lt;p&gt;以下のサイトの
+&lt;img alt=&#34;hugoのインストール&#34; src=&#34;http://localhost:1313/images/20240701/initialized_hugo.png&#34;&gt;
+今回はwindowsで構築するので&lt;code&gt;hugo_0.127.0_windows-amd64.zip&lt;/code&gt;をダウンロードし任意の場所に回答します(＊以後は&lt;code&gt;hugo_path&lt;/code&gt;とします)．&lt;/p&gt;
+&lt;h2 id=&#34;環境変数の設定&#34;&gt;環境変数の設定&lt;/h2&gt;
+&lt;p&gt;hugoのコマンドが実行できるようにpathを通します．
+pathを通す場所は，先ほどのzipファイルの解凍先です．&lt;/p&gt;
+&lt;h2 id=&#34;サイトの初期化&#34;&gt;サイトの初期化&lt;/h2&gt;
+&lt;p&gt;ここから新しいサイトの構築をしていきます．&lt;/p&gt;
+&lt;p&gt;コマンドプロンプトを開いて&lt;code&gt;hugo_path&lt;/code&gt;に移動します．(pathを通した後に再起動などをすれば移動しなくてもいいかもしれません．)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hugo new site {任意の名前}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;実行後，このようにいくつかのファイルが生成されます．&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;initialized_hugo&#34; src=&#34;http://localhost:1313/images/20240701/initialized_hugo.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;テーマの設定&#34;&gt;テーマの設定&lt;/h2&gt;
+&lt;p&gt;Hugoには多くのテンプレートテーマが準備されています．&lt;/p&gt;
+&lt;p&gt;今回は&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Hugo Themes&lt;/a&gt;の中の&lt;code&gt;beautifulhugo&lt;/code&gt;というテーマを使用します．&lt;/p&gt;
+&lt;p&gt;gitよりテーマのファイルをクローンしてきます．(themeディレクトリで)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/halogenica/beautifulhugo.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hugo.toml&lt;/code&gt;に以下の内容を追記します．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;theme = &#39;beautifulhugo&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;これで起動できます．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hugo serve&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;細かい設定について&#34;&gt;細かい設定について&lt;/h2&gt;
+&lt;p&gt;細かい設定などは&lt;code&gt;beautifulhugo&lt;/code&gt;の中の&lt;code&gt;example site&lt;/code&gt;の中に書いてあるのでそちらをディレクトリごとコピーすればいいかなと思います．&lt;/p&gt;
+&lt;h3 id=&#34;記事の作成&#34;&gt;記事の作成&lt;/h3&gt;
+&lt;p&gt;以下のコマンドを実行して新しいファイルを作成します．
+&lt;code&gt;hugo new post/{日付}/{ファイル名}.md&lt;/code&gt;
+私は画像を記事ごとのディレクトリに分けて保存しているため&lt;code&gt;{日付}&lt;/code&gt;というディレクトリを間に挟んでいます．&lt;/p&gt;
+&lt;h3 id=&#34;記事のヘッダーについて&#34;&gt;記事のヘッダーについて&lt;/h3&gt;
+&lt;p&gt;各記事のヘッダーは以下のように記述します．&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
+title: {タイトル}
+subtitle: {サブタイトル}
+date: {投稿日}
+tags: {タグ，複数指定する場合は，[]で囲む}
+bigimg: [{src: {パス}, desc: {キャプション？}}]
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;また先ほどの&lt;code&gt;hugo new post/{日付}/{ファイル名}.md&lt;/code&gt;などで新規ファイルを作成するとヘッダーのデフォルトが&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+++
+title:
+subtitle:
++++
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;みたいな感じになりますが，そちらは&lt;code&gt;archetype/default.md&lt;/code&gt;の中身を書き換えれば反映させることができます．&lt;/p&gt;
+&lt;h3 id=&#34;github-pagesの利用&#34;&gt;Github pagesの利用&lt;/h3&gt;
+&lt;p&gt;ここからは実際にブログとして運用するためにGithub pagesへのデプロイ方法について書いていきます．&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
